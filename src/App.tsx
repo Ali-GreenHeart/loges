@@ -1,7 +1,9 @@
+import WebRouting from "./routing"
+
 function App() {
   return (
     <>
-      Loges
+      <WebRouting />
     </>
   )
 }
