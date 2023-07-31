@@ -6,9 +6,10 @@ interface Props {
     title1: string;
     title2: string;
     link?: string;
+    withIcon?: boolean;
 }
 
-const HeaderInfo = ({ IconElement, title1, title2, link }: Props) => {
+const HeaderInfo = ({ IconElement, title1, title2, link, withIcon = true }: Props) => {
     return (
         <Stack
             flexDirection="row"
@@ -21,18 +22,20 @@ const HeaderInfo = ({ IconElement, title1, title2, link }: Props) => {
                 }
             }}
         >
-            <IconElement
-                color="primary"
-                sx={{
-                    border: '1px solid',
-                    borderColor: 'rgba(17, 28, 85, 0.8)',
-                    borderRadius: '50%',
-                    p: 1,
-                    fontSize: 30,
-                    backgroundColor: 'secondary.light',
-                    boxSizing: 'content-box'
-                }}
-            />
+            {
+                withIcon && <IconElement
+                    color="primary"
+                    sx={{
+                        border: '1px solid',
+                        borderColor: 'rgba(17, 28, 85, 0.8)',
+                        borderRadius: '50%',
+                        p: 1,
+                        fontSize: 30,
+                        backgroundColor: 'secondary.light',
+                        boxSizing: 'content-box'
+                    }}
+                />
+            }
             <Box>
                 <Typography>{title1}</Typography>
                 <Typography component={link ? 'a' : 'p'} href={link}>{title2}</Typography>
