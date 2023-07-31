@@ -6,7 +6,8 @@ const theme = createTheme({
             main: '#FFBE34'
         },
         secondary: {
-            main: '#091242'
+            main: '#091242',
+            light: 'rgba(39, 50, 112,0.6)'
         }
     }
 })
