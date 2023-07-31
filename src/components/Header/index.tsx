@@ -1,21 +1,17 @@
-import * as React from 'react';
+import { AccessTime, EmailOutlined } from "@mui/icons-material";
+import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Stack } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import MenuItem from '@mui/material/MenuItem';
-import logo from '../../assets/logo.png'
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import * as React from 'react';
+import logo from '../../assets/logo.png';
 import HeaderInfo from './HeaderInfo';
-import { Stack } from '@mui/material';
-import { AccessTime, EmailOutlined } from "@mui/icons-material"
-import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
-
-
-const pages = ['Products', 'Pricing', 'Blog'];
 
 const links = [
     {
@@ -51,7 +47,7 @@ function Header() {
     };
 
     return (
-        <AppBar position="static"
+        <AppBar position="sticky"
             sx={{ backgroundColor: 'secondary.main', py: 3 }}
         >
             <Container maxWidth="lg" >
