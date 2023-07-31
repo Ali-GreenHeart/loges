@@ -96,12 +96,21 @@ function Header() {
                             onClose={handleCloseNavMenu}
                             sx={{
                                 display: { xs: 'block', md: 'none' },
+                                '& *': {
+                                    color: '#091242 !important',
+
+                                }
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
-                                </MenuItem>
+                            {links.map((link) => (
+                                <Box
+                                    sx={{
+                                        p: 2,
+                                        minWidth: 200
+                                    }}
+                                    key={link.key} onClick={handleCloseNavMenu}>
+                                    <HeaderInfo withIcon={false}  {...link} />
+                                </Box>
                             ))}
                         </Menu>
                     </Box>
