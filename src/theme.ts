@@ -22,9 +22,6 @@ const theme = createTheme({
                     },
                     '& fieldset': {
                         borderColor: 'rgba(255,255,255,0.5)',
-                    },
-                    '& fieldset:hover': {
-                        borderColor: 'rgba(255,255,255,0.5)',
                     }
                 }
             }
