@@ -1,4 +1,4 @@
-import { Box, Button, Container, Stack, TextField, Typography } from "@mui/material"
+import { Box, Button, Container, Divider, Stack, TextField, Typography } from "@mui/material"
 import logo from '../../assets/logo.png'
 import HeaderInfo from "../Header/HeaderInfo"
 import { EmailOutlined, Facebook, LinkedIn, Twitter } from "@mui/icons-material"
@@ -8,8 +8,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <Box bgcolor="secondary.main">
-
+        <Box bgcolor="secondary.main" pb={5}>
             <Box sx={{ height: 80 }} bgcolor="secondary.light"></Box>
             <Container sx={{ position: 'relative', top: -80 }}>
                 <Stack justifyContent="space-between" flexDirection="row" flexWrap="wrap"
@@ -104,6 +103,32 @@ const Footer = () => {
                     </Box>
                 </Stack >
             </Container >
+            <Divider sx={{ backgroundColor: 'rgba(255,255,255,0.5)', mb: 4 }} />
+            <Container>
+                <Stack
+                    flexDirection="row"
+                    justifyContent={{ xs: 'center', md: "space-between" }}
+                    flexWrap="wrap">
+                    <Typography
+                        sx={{
+                            color: 'white'
+                        }}
+                    >Copyright © TransitFlow | Designed by VictorFlow - Powered by Webflow.</Typography>
+                    <Stack
+                        flexDirection="row"
+                        gap={4}
+                        sx={{
+                            "& a": {
+                                color: 'rgba(255,255,255,0.5)'
+                            }
+                        }}>
+                        <Typography component="a" href="#">Style Guide</Typography>
+                        <Typography component="a" href="#">Licenses</Typography>
+                        <Typography component="a" href="#">Changelog</Typography>
+                        <Typography component="a" href="#">Password</Typography>
+                    </Stack>
+                </Stack>
+            </Container>
         </Box >
     )
 }
