@@ -9,6 +9,26 @@ const theme = createTheme({
             main: '#091242',
             light: 'rgba(39, 50, 112,0.6)'
         }
+    },
+    components: {
+        MuiTextField: {
+            styleOverrides: {
+                root: {
+                    '& input': {
+                        color: 'rgba(255,255,255,0.5)'
+                    },
+                    '& label': {
+                        color: 'rgba(255,255,255,0.5)'
+                    },
+                    '& fieldset': {
+                        borderColor: 'rgba(255,255,255,0.5)',
+                    },
+                    '& fieldset:hover': {
+                        borderColor: 'rgba(255,255,255,0.5)',
+                    }
+                }
+            }
+        }
     }
 })
 
