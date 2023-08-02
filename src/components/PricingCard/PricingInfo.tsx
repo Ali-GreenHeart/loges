@@ -27,7 +27,7 @@ function PricingInfo({ cardType, cardPrice, feature1, feature2, feature3, featur
       mx="auto"
       py={6}
       sx={{
-        backgroundColor: isSpecial ? "secondary.main" : null,
+        backgroundColor: isSpecial ? "secondary.main" : "#F4F4F4",
         "& p,h1": { color: isSpecial ? "white" : null },
         minWidth: 300,
         maxWidth: 320,
