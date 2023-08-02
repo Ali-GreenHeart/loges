@@ -50,7 +50,7 @@ function Header() {
         <AppBar position="sticky"
             sx={{ backgroundColor: 'secondary.main', py: 3 }}
         >
-            <Container maxWidth="lg" >
+            <Container>
                 <Toolbar disableGutters >
                     <Typography
                         variant="h6"
