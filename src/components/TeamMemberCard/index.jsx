@@ -28,7 +28,10 @@ function TeamMemberCard() {
               </Typography>
             </CardContent>
           </CardActionArea>
-          <CardActions sx={{ justifyContent: "center", background: mediaBackgroundColor }}>
+          <CardActions sx={{ justifyContent: "center", background: mediaBackgroundColor,position:"relative",
+           top:'-125px',
+           width:'160px',
+           left:"140px"}}>
             <IconButton>
               <LinkedIn />
             </IconButton>
@@ -41,7 +44,7 @@ function TeamMemberCard() {
           </CardActions>
         </Card>
 
-        <Card sx={{ maxWidth: 300, backgroundColor: cardBackgroundColor }}>
+        <Card sx={{ maxWidth: 300, backgroundColor: cardBackgroundColor}}>
           <CardActionArea>
             <CardMedia component="img" image={member2} alt="Kathleen Smith" />
             <CardContent>
@@ -53,7 +56,10 @@ function TeamMemberCard() {
               </Typography>
             </CardContent>
           </CardActionArea>
-          <CardActions sx={{ justifyContent: "center", background: mediaBackgroundColor }}>
+          <CardActions sx={{ justifyContent: "center", background: mediaBackgroundColor, position:"relative",
+           top:'-125px',
+           width:'160px',
+           left:"140px"}}>
             <IconButton>
               <LinkedIn />
             </IconButton>
