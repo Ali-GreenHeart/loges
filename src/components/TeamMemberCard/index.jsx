@@ -18,20 +18,17 @@ function TeamMemberCard() {
       <Stack flexDirection={"row"} justifyContent={"center"} gap={5}>
         <Card sx={{ maxWidth: 300, backgroundColor: cardBackgroundColor }}>
           <CardActionArea>
-            <CardMedia component="img" image={member1} alt="Jessca Arroü" />
+            <CardMedia component="img" image={member1} alt="Jessca Arrow" />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography gutterBottom variant="h5" component="div" sx={{ color: "#fff", paddingTop: "8px" }}>
                 Jessca Arrow
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Desinger
+              <Typography variant="body2" color="text.secondary" sx={{ color: "#fff" }}>
+                Designer
               </Typography>
             </CardContent>
           </CardActionArea>
-          <CardActions sx={{ justifyContent: "center", background: mediaBackgroundColor,position:"relative",
-           top:'-125px',
-           width:'160px',
-           left:"140px"}}>
+          <CardActions sx={{ justifyContent: "center", background: mediaBackgroundColor, position: "relative", top: '-125px', width: '160px', left: "140px" }}>
             <IconButton>
               <LinkedIn />
             </IconButton>
@@ -44,22 +41,19 @@ function TeamMemberCard() {
           </CardActions>
         </Card>
 
-        <Card sx={{ maxWidth: 300, backgroundColor: cardBackgroundColor}}>
+        <Card sx={{ maxWidth: 300, backgroundColor: cardBackgroundColor }}>
           <CardActionArea>
             <CardMedia component="img" image={member2} alt="Kathleen Smith" />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography gutterBottom variant="h5" component="div" sx={{ color: "#fff", paddingTop: "8px" }}>
                 Kathleen Smith
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Desinger
+              <Typography variant="body2" color="text.secondary" sx={{ color: "#fff" }}>
+                Designer
               </Typography>
             </CardContent>
           </CardActionArea>
-          <CardActions sx={{ justifyContent: "center", background: mediaBackgroundColor, position:"relative",
-           top:'-125px',
-           width:'160px',
-           left:"140px"}}>
+          <CardActions sx={{ justifyContent: "center", background: mediaBackgroundColor, position: "relative", top: '-125px', width: '160px', left: "140px" }}>
             <IconButton>
               <LinkedIn />
             </IconButton>
@@ -67,7 +61,7 @@ function TeamMemberCard() {
               <Instagram />
             </IconButton>
             <IconButton>
-              <Twitter /> 
+              <Twitter />
             </IconButton>
           </CardActions>
         </Card>
@@ -76,18 +70,15 @@ function TeamMemberCard() {
           <CardActionArea>
             <CardMedia component="img" image={member3} alt="Rebecca Tylor" />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography gutterBottom variant="h5" component="div" sx={{ color: "#fff",  }}>
                 Rebecca Tylor
               </Typography>
-              <Typography variant="body2" color="text.secondary" >
-                Desinger
+              <Typography variant="body2" color="text.secondary" sx={{ color: "#fff" }}>
+                Designer
               </Typography>
             </CardContent>
           </CardActionArea>
-          <CardActions sx={{ justifyContent: "center", background: mediaBackgroundColor ,position:"relative",
-           top:'-125px',
-           width:'160px',
-           left:"140px"}}>
+          <CardActions sx={{ justifyContent: "center", background: mediaBackgroundColor, position: "relative", top: '-125px', width: '160px', left: "140px" }}>
             <IconButton>
               <LinkedIn />
             </IconButton>
@@ -95,7 +86,7 @@ function TeamMemberCard() {
               <Instagram />
             </IconButton>
             <IconButton>
-              <Twitter /> 
+              <Twitter />
             </IconButton>
           </CardActions>
         </Card>
