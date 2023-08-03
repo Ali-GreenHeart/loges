@@ -1,8 +1,8 @@
-import { Route, Routes, } from "react-router"
-import { Suspense, lazy } from 'react'
-import Loading from "../components/Loading"
+import { Route, Routes } from "react-router-dom";
+import { Suspense, lazy } from 'react';
+import Loading from "../components/Loading";
 
-const HomePage = lazy(() => import("../pages/Home"))
+const HomePage = lazy(() => import("../pages/Home"));
 
 
 const WebRouting = () => {
@@ -10,8 +10,10 @@ const WebRouting = () => {
         <Suspense fallback={<Loading />}>
             <Routes>
                 <Route path="/" element={<HomePage />} />
+                
             </Routes>
         </Suspense>
-    )
-}
-export default WebRouting
+    );
+};
+
+export default WebRouting;
