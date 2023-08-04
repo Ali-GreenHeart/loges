@@ -1,5 +1,6 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import PricingInfo from "./PricingInfo";
+import SectionHeader from "../SectionHeader";
 
 const prices = [
   {
@@ -39,19 +40,10 @@ const prices = [
 function PricingCard() {
   return (
     <Container maxWidth="lg">
-      <Stack alignItems={"center"}>
-        <Stack flexDirection={"row"}
-          justifyContent={"center"}
-          alignItems={"center"}>
-          <Box sx={{ height: 23, borderLeft: "4px solid #FFBE34", }}></Box>
-          <Typography component="p" sx={{ fontSize: 10, padding: 2 }}>
-            Pricing
-          </Typography>
-        </Stack>
-        <Typography variant="h4" component="h1" sx={{ fontWeight: 700 }}>
-          Our Best Pricing
-        </Typography>
-      </Stack>
+      <SectionHeader
+        heading="Pricing"
+        subheading="Our Best Pricing"
+      />
 
       <Stack flexDirection="row" my={8} flexWrap={"wrap"} gap={5}
       >

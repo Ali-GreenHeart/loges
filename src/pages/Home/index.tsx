@@ -1,12 +1,11 @@
-import PageContainer from "../../components/PageContainer"
-import PricingCard from "../../components/PricingCard"
+import PageContainer from "../../components/PageContainer";
 
 const HomePage = () => {
-    return (
-        // <PageContainer />
-        <PricingCard
+  return (
+    <>
+      <PageContainer />
+    </>
+  );
+};
 
-        />
-    )
-}
-export default HomePage
+export default HomePage;
