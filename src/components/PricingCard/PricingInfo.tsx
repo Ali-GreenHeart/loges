@@ -7,6 +7,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import { useEffect, useState } from "react";
 
 interface IPrice {
   cardType: string,
@@ -18,7 +19,21 @@ interface IPrice {
   isSpecial?: boolean
 }
 
+
+
+
 function PricingInfo({ cardType, cardPrice, feature1, feature2, feature3, feature4, isSpecial = false }: IPrice) {
+  const [screenWidth , setScreenWidth] = useState(window.innerWidth)
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <Stack
       rowGap={3}
@@ -28,10 +43,10 @@ function PricingInfo({ cardType, cardPrice, feature1, feature2, feature3, featur
       py={6}
       sx={{
         backgroundColor: isSpecial ? "secondary.main" : "#F4F4F4",
-        "& p,h1": { color: isSpecial ? "white" : null },
-        minWidth: 300,
-        maxWidth: 320,
-        order: { xs: isSpecial ? '3' : 'unset', lg: 'unset' }
+        "& h1": { color: isSpecial ? "white" : null },
+       minWidth: 270,
+       maxWidth:310,
+        order: { xs: (isSpecial &&  screenWidth>627) ? '3' : "unset"  , md: (isSpecial && screenWidth<=937)? "3" :"unset" ,lg:"unset" }
       }}
     >
       <Typography
@@ -48,19 +63,19 @@ function PricingInfo({ cardType, cardPrice, feature1, feature2, feature3, featur
       </Typography>
       <List component="nav" aria-label="mailbox folders">
         <ListItem divider>
-          <Typography component="p" >{feature1}</Typography>
+          <Typography sx={{color:isSpecial?"white":null }} component="p" >{feature1}</Typography>
         </ListItem>
         <Divider sx={{ boxShadow: "0 0 1px #ccc" }} />
         <ListItem divider>
-          <Typography component="p">{feature2}</Typography>
+          <Typography sx={{color:isSpecial?"white":null }} component="p">{feature2}</Typography>
         </ListItem>
         <Divider sx={{ boxShadow: "0 0 1px #ccc" }} />
         <ListItem divider>
-          <Typography component="p">{feature3}</Typography>
+          <Typography sx={{color:isSpecial?"white":null }} component="p">{feature3}</Typography>
         </ListItem>
         <Divider sx={{ boxShadow: "0 0 1px #ccc" }} />
         <ListItem divider>
-          <Typography component="p">{feature4}</Typography>
+          <Typography sx={{color:isSpecial?"white":null }} component="p">{feature4}</Typography>
         </ListItem>
         <Divider sx={{ boxShadow: "0 0 1px #ccc" }} />
 
@@ -69,13 +84,31 @@ function PricingInfo({ cardType, cardPrice, feature1, feature2, feature3, featur
       <Button variant="contained" color={isSpecial ? "primary" : "secondary"}
         sx={{
           position: "relative",
-          background: isSpecial
-            ? "linear-gradient(45deg, #FFB629, #FFDA56, #FFD7A6)"
+         
+          background: isSpecial?
+             "linear-gradient(45deg, #FFB629, #FFDA56, #FFD7A6)"
             : "",
+            "&>div":{
+              transition: "all 0.5s",
+            },
+            "&:hover" : {
+            
+              "&>div":{
+                width:"50%",
+                height:"100%",
+                borderTopLeftRadius: "30%",
+                borderBottomLeftRadius:"30%",
+                zIndex:"1",
+              }
+            },
+            "&>p":{
+              color:isSpecial ? "black" : "white"
+            }
+            
         }}
       >
-        Choose Plan
-        <Box bgcolor={isSpecial ? "#FFFFFF" : "#1F2A69"} sx={{ position: "absolute", right: 0, bottom: "0px", borderRadius: "50%", width: 20, height: 10 }}></Box>
+        <Typography component="p" sx={{zIndex:2}}>Choose Plan</Typography>.
+        <Box bgcolor={isSpecial ? "#FFFFFF" : "#1F2A69"} sx={{ position: "absolute", right: 0, bottom: "0px", borderTopLeftRadius: "50%", borderBottomLeftRadius:"50%" , width: 15, height: 15 , zIndex:0 }}></Box>
       </Button>
     </Stack>
   )
