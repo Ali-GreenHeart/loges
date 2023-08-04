@@ -4,7 +4,7 @@ import WebRouting from "./routing"
 function App() {
   return (
     <>
-      <WebRouting />
+      {/* <WebRouting /> */}
       <PricingCard />
     </>
   )
