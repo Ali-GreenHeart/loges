@@ -3,7 +3,9 @@ import PageContainer from "../../components/PageContainer";
 const HomePage = () => {
   return (
     <>
-      <PageContainer />
+      <PageContainer>
+        <p>xmknfldkvn</p>
+      </PageContainer>
     </>
   );
 };
