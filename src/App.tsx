@@ -1,4 +1,4 @@
-import BlogCard from "./components/blogcard"
+import BlogCard from "./components/BlogCardSection"
 import WebRouting from "./routing"
 
 function App() {

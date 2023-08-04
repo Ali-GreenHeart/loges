@@ -1,16 +1,15 @@
-import React from "react";
-import "./module.css";
-import Image from "../../assets/Photo.svg";
+import icon from "../../assets/Icon.png";
+import Image4 from "../../assets/Image.svg";
 import Image2 from "../../assets/Image2.svg";
 import Image3 from "../../assets/Image3.svg";
-import Image4 from "../../assets/Image.svg";
 import Image5 from "../../assets/Image4.svg";
-import icon from "../../assets/Icon.png";
+import Image from "../../assets/Photo.svg";
+import "./module.css";
+import { Box } from "@mui/material";
+import BlogCard from "./BlogCard";
 
-import { Box, Button, ButtonBase, Divider, Stack } from "@mui/material";
-import { Rowing } from "@mui/icons-material";
 
-interface BlogData {
+export interface BlogData {
   id: number;
   image: string;
   content: string;
@@ -24,6 +23,7 @@ interface BlogData {
     third?: string;
     fourth?: string;
   };
+  blogLink: string;
 }
 
 const blogData: BlogData[] = [
@@ -42,6 +42,7 @@ const blogData: BlogData[] = [
       third: "Transportation services",
       fourth: "Logistic management",
     },
+    blogLink: "hvfdb"
   },
   {
     id: 2,
@@ -58,6 +59,7 @@ const blogData: BlogData[] = [
       third: "Transportation services",
       fourth: "Logistic management",
     },
+    blogLink: "hvfdb",
   },
   {
     id: 3,
@@ -66,6 +68,7 @@ const blogData: BlogData[] = [
     title: "Five things you should have ready for your broker",
     content:
       "We are dedicated in creating added value for our customers by implementing modern technology in our work. ",
+    blogLink: "hvfdb",
     date: "25",
     month: "March",
     specifications: {
@@ -80,6 +83,7 @@ const blogData: BlogData[] = [
     icon: icon,
     image: Image4,
     title: "Four simple tips for becoming a healthier truck driver",
+    blogLink: "hvfdb",
     content:
       "We are dedicated in creating added value for our customers by implementing modern technology in our work. ",
     date: "28",
@@ -96,6 +100,7 @@ const blogData: BlogData[] = [
     icon: icon,
     image: Image5,
     title: "What Is The Role Of A Logistics Operations Manager",
+    blogLink: "hvfdb",
     content:
       "We are dedicated in creating added value for our customers by implementing modern technology in our work. ",
     date: "30  ",
@@ -109,39 +114,16 @@ const blogData: BlogData[] = [
   },
 ];
 
-function BlogCard() {
+function BlogCardSection() {
   return (
     <>
-    <Box className="title">
-      <div className="oubl">Our blog</div>
-      <div className="oln">Our Latest News</div>
-    </Box>
-      {blogData.map((item: any) => (
-        <Stack key={item.id} sx={{ flexDirection: "row" }} className="all"> 
-          <Stack sx={{ flexDirection: "row" }} className="left">
-            <img className="images" src={item.image} alt="" />
-            <Box className="elshad">
-              <Stack className="releaseDate">
-              <img className="icons" src={item.icon} alt="" />
-                <p>{item.date}</p>
-                <p>{item.month}</p>
-              </Stack>
-            </Box>
-          </Stack>
-          <Box className="right">
-            <aside>{item.title}</aside>
-            <p>{item.content}</p>
-            <ul>
-              <li>{item.specifications.first}</li>
-              <li>{item.specifications.second}</li>
-              <li>{item.specifications.third}</li>
-              <li>{item.specifications.fourth}</li>
-            </ul>
-          </Box>
-        </Stack>
-      ))}
+      <Box className="title">
+        <div className="oubl">Our blog</div>
+        <div className="oln">Our Latest News</div>
+      </Box>
+      {blogData.map((item: any) => (<BlogCard key={item.id} {...item} />))}
     </>
   );
 }
 
-export default BlogCard;
+export default BlogCardSection;
