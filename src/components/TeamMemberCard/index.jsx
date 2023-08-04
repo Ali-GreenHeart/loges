@@ -1,20 +1,20 @@
-import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea, Container, Stack, IconButton, CardActions } from "@mui/material";
-import { LinkedIn, Instagram, Twitter } from "@mui/icons-material";
+import { Container, Stack } from "@mui/material";
+import React from "react";
 import member1 from "../../assets/member1.png";
 import member2 from "../../assets/member2.png";
 import member3 from "../../assets/member3.png";
-import MemberCard from "./MemberCard"
+import MemberCard from "./MemberCard";
+import SectionHeader from "../SectionHeader"
 
 function TeamMemberCard() {
 
   return (
     <Container>
-      <Stack flexDirection={"row"} justifyContent={"center"} gap={5}>
+      <SectionHeader
+        heading="The Transporters"
+        subheading="Meet expert team"
+      />
+      <Stack flexDirection={"row"} justifyContent={"center"} flexWrap="wrap" gap={5}>
         <MemberCard
           imgSrc={member1}
           name="Jessca Arrow"
