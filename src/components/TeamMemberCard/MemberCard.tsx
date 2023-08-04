@@ -28,7 +28,11 @@ const MemberCard = ({ imgSrc, name, job, twitterLink, linkedInLink, instagramLin
             </CardContent>
             <CardActions sx={{
                 justifyContent: "center", background: "linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 35%, rgba(255,215,166,1) 100%)",
-                position: "absolute", bottom: 70, right: 0
+                position: "absolute", bottom: 70, right: 0,
+                py: 2,
+                "&>a": {
+                    fontSize: 0
+                }
             }}>
                 {
                     linkedInLink && <Link to={linkedInLink}>
