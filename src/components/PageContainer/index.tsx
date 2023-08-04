@@ -1,11 +1,16 @@
 import Footer from "../Footer"
 import Header from "../Header"
+import ServiceCard from "../ServiceCardd/ServiceCard"
+
+    
+
 
 const PageContainer = () => {
     return (
         <>
             <Header />
-            <div>other parts...</div>
+           <ServiceCard/>
+
             <Footer />
         </>
     )
