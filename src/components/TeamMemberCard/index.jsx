@@ -8,88 +8,36 @@ import { LinkedIn, Instagram, Twitter } from "@mui/icons-material";
 import member1 from "../../assets/member1.png";
 import member2 from "../../assets/member2.png";
 import member3 from "../../assets/member3.png";
+import MemberCard from "./MemberCard"
 
 function TeamMemberCard() {
-  const cardBackgroundColor = "#1C1F35";
-  const mediaBackgroundColor = "linear-gradient(90deg, rgba(255,182,41,1) 0%, rgba(255,218,86,1) 35%, rgba(255,215,166,1) 100%)";
 
   return (
     <Container>
       <Stack flexDirection={"row"} justifyContent={"center"} gap={5}>
-        <Card sx={{ maxWidth: 300, backgroundColor: cardBackgroundColor }}>
-          <CardActionArea>
-            <CardMedia component="img" image={member1} alt="Jessca Arrow" />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div" sx={{ color: "#fff", paddingTop: "8px" }}>
-                Jessca Arrow
-              </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ color: "#fff" }}>
-                Designer
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions sx={{ justifyContent: "center", background: mediaBackgroundColor, position: "relative", top: '-125px', width: '160px', left: "140px" }}>
-            <IconButton>
-              <LinkedIn />
-            </IconButton>
-            <IconButton>
-              <Instagram />
-            </IconButton>
-            <IconButton>
-              <Twitter />
-            </IconButton>
-          </CardActions>
-        </Card>
-
-        <Card sx={{ maxWidth: 300, backgroundColor: cardBackgroundColor }}>
-          <CardActionArea>
-            <CardMedia component="img" image={member2} alt="Kathleen Smith" />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div" sx={{ color: "#fff", paddingTop: "8px" }}>
-                Kathleen Smith
-              </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ color: "#fff" }}>
-                Designer
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions sx={{ justifyContent: "center", background: mediaBackgroundColor, position: "relative", top: '-125px', width: '160px', left: "140px" }}>
-            <IconButton>
-              <LinkedIn />
-            </IconButton>
-            <IconButton>
-              <Instagram />
-            </IconButton>
-            <IconButton>
-              <Twitter />
-            </IconButton>
-          </CardActions>
-        </Card>
-
-        <Card sx={{ maxWidth: 300, backgroundColor: cardBackgroundColor }}>
-          <CardActionArea>
-            <CardMedia component="img" image={member3} alt="Rebecca Tylor" />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div" sx={{ color: "#fff",  }}>
-                Rebecca Tylor
-              </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ color: "#fff" }}>
-                Designer
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions sx={{ justifyContent: "center", background: mediaBackgroundColor, position: "relative", top: '-125px', width: '160px', left: "140px" }}>
-            <IconButton>
-              <LinkedIn />
-            </IconButton>
-            <IconButton>
-              <Instagram />
-            </IconButton>
-            <IconButton>
-              <Twitter />
-            </IconButton>
-          </CardActions>
-        </Card>
+        <MemberCard
+          imgSrc={member1}
+          name="Jessca Arrow"
+          job="Designer"
+          facebookLink="guya"
+          linkedInLink="guya2"
+          twitterLink="sfdg"
+        />
+        <MemberCard
+          imgSrc={member2}
+          name="Kathleen Smith"
+          job="Designer"
+          facebookLink="guya"
+          linkedInLink="guya2"
+          instagramLink="sfdg"
+        />
+        <MemberCard
+          imgSrc={member3}
+          name=" Rebecca Tylor"
+          job="Designer"
+          facebookLink="guya"
+          linkedInLink="guya2"
+        />
       </Stack>
     </Container>
   );
