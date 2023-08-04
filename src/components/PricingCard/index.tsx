@@ -3,9 +3,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./module.css"
 import pattern from "../PricingCard"
+import MiuButton from "../MiuButton";
 const Package: any = [
   {
     id: 0,
+    isSpecial:false,
     title: "Basic",
     price: {
       monthlyPrice: "$84",
@@ -20,6 +22,7 @@ const Package: any = [
   },
   {
     id: 1,
+    isSpecial:true,
     title: "Standard",
     price: {
       monthlyPrice: "$84",
@@ -34,6 +37,7 @@ const Package: any = [
   },
   {
     id: 2,
+    isSpecial:false,
     title: "Premium",
     price: {
       monthlyPrice: "$84",
@@ -55,8 +59,8 @@ const PricingCard = () => {
         <Stack className="parent" direction="row" spacing={2}
           key={item.id}
         >
-          <Box className="main" sx={{
-            
+          <Box className="main"
+            sx={{
               backgroundColor: "#F4F4F4",
               width: 250,
               display: "flex",
@@ -70,18 +74,14 @@ const PricingCard = () => {
                 color:"white"
               },
               "&:hover p":{
-                // backgroundColor:"#091242",
-                // transform:'translateY(-8%)',
                 color:"white !important"
               },
               "&:hover button":{
-                // backgroundColor:"#091242",
-                // transform:'translateY(-8%)',
                 backgroundColor:"#FFB629",
                 color:"#091242",
-                // backgroundImage:,
               }
           }}
+
 
           >
             <h3>{item.title}</h3>
@@ -95,21 +95,7 @@ const PricingCard = () => {
               <p className="specification">{item.specifications.distance}</p>
               <p className="specification" style={{borderBottom:"1px solid #d6d6d680"}}>{item.specifications.ratings}</p>
             </div>
-            <Button className="chooseButton" sx={{
-                backgroundColor:"#091242",
-                color:"#FFB629",
-                transition:"0.5s all",
-                fontWeight:600,
-        
-               
-              "&:hover":{
-                // backgroundPosition:"inherit"
-                backgroundColor:"#091242"
-              }
-            }}>
-              Choose Plan
-           
-            </Button>
+            <MiuButton></MiuButton>
           </Box>
         </Stack>
       ))}
