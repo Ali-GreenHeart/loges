@@ -1,6 +1,11 @@
 import { Button } from '@mui/material'
 
-const MiuButton = () => {
+interface IProps{
+  title?:string,
+}
+
+
+const MiuButton = ({title}:IProps) => {
   return <>
   
     <Button className="chooseButton" sx={{
@@ -14,7 +19,7 @@ const MiuButton = () => {
         
         backgroundColor:"#091242"
     }
-}}>Choose Plan</Button>
+}}>{title}</Button>
 </>
   
 }
