@@ -1,44 +1,50 @@
-
-import {  Container, Typography } from "@mui/material";
-import Header from "../Header";
-import Footer from "../Footer";
+import { Container, Typography, Stack } from '@mui/material';
+import Header from '../Header';
+import Footer from '../Footer';
+import Banner from '../Banner';
+import Bannerimg from '../../assets/ChangeLog/Banner.png';
 
 const ChangeLog = () => {
   return (
     <>
       <Header />
-      <Container
-        sx={{
-          bgcolor: "#091242",
-          color: "white",
-          width: 762,
-          height: 251,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "row",
-          gap: "35px",
-        }}
-      >
-        <Typography variant="h4" fontWeight="bold">
-          Version 01
-        </Typography>
-        <Typography
+      <Stack spacing={4} alignItems="center">
+        <Banner src={Bannerimg} alt="Banner"/>
+        <Container
           sx={{
-            bgcolor: "rgba(39, 50, 112, 0.6)",
-            height: "45px",
-            width: "380px",
+            bgcolor: "#091242",
+            color: "white",
+            width: 762,
+            height: 251,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            flexDirection: "row",
+            gap: "35px",
+           
           }}
         >
-          Initial TransitFlow Webflow Template Release
-        </Typography>
-      </Container>
+          <Typography variant="h4" fontWeight="bold">
+            Version 01
+          </Typography>
+          <Typography
+            sx={{
+              bgcolor: "rgba(39, 50, 112, 0.6)",
+              height: "45px",
+              width: "380px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            Initial TransitFlow Webflow Template Release
+          </Typography>
+        </Container>
+       
+      </Stack>
       <Footer />
     </>
   );
-};
+}
 
 export default ChangeLog;
