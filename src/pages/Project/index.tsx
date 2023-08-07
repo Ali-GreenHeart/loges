@@ -7,10 +7,10 @@ import FooterInfo from '../../components/WhyUs/footerInfo'
 const Project = () => {
   return (
     <PageContainer >
-        <Box>
-   <WhyUs/>
-   <FooterInfo/>
-        </Box>
+      <Box>
+        <WhyUs />
+        <FooterInfo />
+      </Box>
     </PageContainer>
   )
 }
