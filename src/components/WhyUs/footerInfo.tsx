@@ -37,14 +37,16 @@ const FooterInfo = () => {
                 borderRight: "1px solid #ddd",
               }}
               item
-              xs
+              xs={12}
+              sm={6}
+              lg={3}
             >
               <Stack flexDirection="row" alignItems="center" gap={2}>
                 <Typography fontWeight={800} variant="h3" component="h3">
                   {info.count}
                 </Typography>
                 <Box
-                  sx={{  
+                  sx={{
 
                     width: 17,
                     height: 17,
