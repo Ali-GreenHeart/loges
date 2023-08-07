@@ -1,37 +1,37 @@
 import { Container, Stack, Typography } from '@mui/material';
 import Bannerimg from '../../assets/ChangeLog/Banner.png';
-import Banner from '../Banner';
+import PageContainer from '../../components/PageContainer';
 
 const ChangeLog = () => {
   return (
-    <>
-      <Stack spacing={4} alignItems="center">
-        <Banner src={Bannerimg} alt="Banner" />
+    <PageContainer
+      bannerImage={Bannerimg}
+      bannerTitle="Change Log"
+      bannerSubtitle="Updates"
+    >
+      <Stack my={7} spacing={4} alignItems="center">
         <Container
+          maxWidth="sm"
           sx={{
             bgcolor: "#091242",
             color: "white",
-            width: 762,
-            height: 251,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "row",
-            gap: "35px",
-
+            flexWrap: 'wrap',
+            gap: 3,
+            py: 6
           }}
         >
-          <Typography variant="h4" fontWeight="bold">
+          <Typography variant="h5" fontWeight="bold">
             Version 01
           </Typography>
           <Typography
             sx={{
               bgcolor: "rgba(39, 50, 112, 0.6)",
-              height: "45px",
-              width: "380px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              p: 2,
+              textAlign: 'center'
             }}
           >
             Initial TransitFlow Webflow Template Release
@@ -39,7 +39,7 @@ const ChangeLog = () => {
         </Container>
 
       </Stack>
-    </>
+    </PageContainer>
   );
 }
 
