@@ -1,5 +1,3 @@
-import Footer from "../Footer";
-import Header from "../Header";
 import MainImg from "../../assets/HowWeWork/mainImg.png";
 import SecondImg from "../../assets/HowWeWork/secondImg.png";
 import { CardMedia, Container, Box, Typography } from "@mui/material";
@@ -11,7 +9,6 @@ import Icon3 from "../../assets/HowWeWork/logos/Environment Icon.png";
 const HowWeWork = () => {
   return (
     <>
-      <Header />
       <Box sx={{ backgroundColor: "#F4F4F4" }}>
         <Container sx={{ maxWidth: "800px", padding: "10px 10px 50px 10px" }}>
           <SectionHeader heading={"Our Goodness"} subheading={"How We Works"} />
@@ -22,7 +19,7 @@ const HowWeWork = () => {
               gap: "50px",
             }}
           >
-            
+
             <Box sx={mainImgContainerStyle}>
               <CardMedia component="img" image={MainImg} alt="worker" />
               <CardMedia component="img" image={SecondImg} alt="state" sx={secondImgStyle} />
@@ -62,7 +59,6 @@ const HowWeWork = () => {
           </Box>
         </Container>
       </Box>
-      <Footer />
     </>
   );
 };
