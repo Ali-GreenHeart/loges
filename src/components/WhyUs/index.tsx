@@ -10,50 +10,50 @@ import WhyInfo from "./whyUsInfo";
 
 const imgPath = [
     {
-        key:0,
-        src:img1
+        key: 0,
+        src: img1
     },
     {
-        key:1,
-        src:img2
+        key: 1,
+        src: img2
     },
     {
-        key:2,
-        src:img3
+        key: 2,
+        src: img3
     }
-    ,  {
-        key:3,
-        src:img4
+    , {
+        key: 3,
+        src: img4
     }
-    ,  {
-        key:4,
-        src:img5
+    , {
+        key: 4,
+        src: img5
     },
-    ,  {
-        key:5,
-        src:img6
+    , {
+        key: 5,
+        src: img6
     },
-    
+
 
 ]
 
-function WhyUs(){
-    return(
-        <Container sx={{my:8}}>
-            
-           <Stack
-           flexDirection="row"
-           flexWrap="wrap"
-           columnGap={4}
-           rowGap={4}>
-            {
-                imgPath.map((img)=>{
-                    return(
-                        <WhyInfo imgSrc={img?.src}/>       
-                    )
-                })
-            }
-           </Stack>
+function WhyUs() {
+    return (
+        <Container sx={{ my: 8 }}>
+
+            <Stack
+                flexDirection="row"
+                flexWrap="wrap"
+                columnGap={4}
+                rowGap={4}>
+                {
+                    imgPath.map((img) => {
+                        return (
+                            <WhyInfo key={img?.src} imgSrc={img?.src} />
+                        )
+                    })
+                }
+            </Stack>
 
         </Container>
     )
