@@ -1,22 +1,32 @@
-import { Box } from "@mui/material"
-import Footer from "../Footer"
-import Header from "../Header"
-import WhyUs from "../OurProject";
-
+import { Box } from "@mui/material";
+import Footer from "../Footer";
+import Header from "../Header";
+import Banner from "../Banner";
 
 interface IProps {
-    children: React.ReactElement;
+  children: React.ReactElement;
+  bannerImage?: string;
+  bannerTitle?: string;
+  bannerSubtitle?: string;
 }
 
-const PageContainer = ({ children }: IProps) => {
-    return (
-        <>
-            <Header />
-            <Box component="main">
-                {children}
-            </Box>
-            <Footer />
-        </>
-    )
-}
-export default PageContainer
+const PageContainer = ({
+  children,
+  bannerImage,
+  bannerTitle,
+  bannerSubtitle,
+}: IProps) => {
+  return (
+    <>
+      <Header />
+      <Banner
+        bannerImage={bannerImage}
+        bannerTitle={bannerTitle}
+        bannerSubtitle={bannerSubtitle}
+      />
+      <Box component="main">{children}</Box>
+      <Footer />
+    </>
+  );
+};
+export default PageContainer;
