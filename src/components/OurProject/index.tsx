@@ -6,7 +6,7 @@ import img4 from "../../assets/whyUs/img4.png";
 import img5 from "../../assets/whyUs/img5.png";
 import img6 from "../../assets/whyUs/img6.png";
 
-import WhyInfo from "./whyUsInfo";
+import WhyInfo from "./ProjectInfo";
 
 const imgPath = [
     {

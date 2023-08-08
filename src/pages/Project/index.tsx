@@ -1,14 +1,14 @@
 
 import { Box } from '@mui/material'
 import PageContainer from '../../components/PageContainer'
-import WhyUs from '../../components/WhyUs'
-import FooterInfo from '../../components/WhyUs/footerInfo'
+import OurProject from '../../components/OurProject'
+import FooterInfo from '../../components/OurProject/footerInfo'
 
 const Project = () => {
   return (
     <PageContainer >
       <Box>
-        <WhyUs />
+        <OurProject />
         <FooterInfo />
       </Box>
     </PageContainer>

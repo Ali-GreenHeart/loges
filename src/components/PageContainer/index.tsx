@@ -1,7 +1,7 @@
 import { Box } from "@mui/material"
 import Footer from "../Footer"
 import Header from "../Header"
-import WhyUs from "../WhyUs";
+import WhyUs from "../OurProject";
 
 
 interface IProps {
