@@ -1,10 +1,10 @@
 import { Container, Stack } from "@mui/material";
-import img1 from "../../assets/whyUs/img1.png";
-import img2 from "../../assets/whyUs/img2.png";
-import img3 from "../../assets/whyUs/img3.png";
-import img4 from "../../assets/whyUs/img4.png";
-import img5 from "../../assets/whyUs/img5.png";
-import img6 from "../../assets/whyUs/img6.png";
+import img1 from "../../assets/ourProject/img1.png";
+import img2 from "../../assets/ourProject/img2.png";
+import img3 from "../../assets/ourProject/img3.png";
+import img4 from "../../assets/ourProject/img4.png";
+import img5 from "../../assets/ourProject/img5.png";
+import img6 from "../../assets/ourProject/img6.png";
 
 import WhyInfo from "./ProjectInfo";
 
@@ -37,7 +37,7 @@ const imgPath = [
 
 ]
 
-function WhyUs() {
+function OurProject() {
     return (
         <Container sx={{ my: 8 }}>
 
@@ -59,4 +59,4 @@ function WhyUs() {
     )
 }
 
-export default WhyUs
+export default OurProject

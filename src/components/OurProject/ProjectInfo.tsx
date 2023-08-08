@@ -7,7 +7,7 @@ interface Iimg{
 }
 
 
-function WhyInfo({imgSrc}:Iimg){
+function ProjectInfo({imgSrc}:Iimg){
   return(
     <Stack 
     flexGrow={1}
@@ -29,4 +29,4 @@ function WhyInfo({imgSrc}:Iimg){
 
 }
 
-export default WhyInfo
+export default ProjectInfo

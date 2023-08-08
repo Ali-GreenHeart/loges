@@ -1,4 +1,5 @@
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import { Container, Grid } from "@mui/material";
+import StatisticFooter from "../StatisticFooter";
 
 const infos = [
   {
@@ -29,32 +30,8 @@ const FooterInfo = () => {
       <Grid container>
         {infos.map((info) => {
           return (
-            <Grid
-              key={info.key}
-              sx={{
-                p: 2,
-                borderTop: "1px solid #ddd",
-                borderRight: "1px solid #ddd",
-              }}
-              item
-              xs={12}
-              sm={6}
-              lg={3}
-            >
-              <Stack flexDirection="row" alignItems="center" gap={2}>
-                <Typography fontWeight={800} variant="h3" component="h3">
-                  {info.count}
-                </Typography>
-                <Box
-                  sx={{
-
-                    width: 17,
-                    height: 17,
-                    background: "linear-gradient(94.06deg, #FFB629 -1.21%, #FFDA56 58.66%, #FFD7A6 116.84%)",
-                  }}
-                ></Box>
-                <Typography component="p">{info.possession}</Typography>
-              </Stack>
+            <Grid key={info.key} item xs={12} sm={6} lg={3}>
+              <StatisticFooter count={info.count} info={info.possession} />
             </Grid>
           );
         })}
