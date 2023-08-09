@@ -1,10 +1,11 @@
 import PageContainer from "../../components/PageContainer";
+import PlaneSection from "../../components/Plane";
 
 const HomePage = () => {
   return (
     <>
       <PageContainer>
-        <p>xmknfldkvn</p>
+        <PlaneSection />
       </PageContainer>
     </>
   );
