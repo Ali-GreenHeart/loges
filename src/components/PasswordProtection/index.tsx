@@ -3,11 +3,7 @@ import React from "react";
 import Button from "../Button";
 import theme from "../../theme";
 
-interface IProps {
-  title: string;
-}
-
-const PasswordProtection = ({ title }: IProps) => {
+const PasswordProtection = () => {
   return (
     <>
       <Container style={{padding:"0"}}>
@@ -24,7 +20,7 @@ const PasswordProtection = ({ title }: IProps) => {
           alignItems:'center',
           
         }}>
-          <h1>{title}</h1>
+          <h1>Enter Password</h1>
           <Stack 
           sx={{
             flexDirection:{xs:"column", md:"row"},
