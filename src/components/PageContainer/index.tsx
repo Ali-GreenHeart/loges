@@ -24,7 +24,9 @@ const PageContainer = ({
         bannerTitle={bannerTitle}
         bannerSubtitle={bannerSubtitle}
       />
-      <Box component="main">{children}</Box>
+      <Box component="main"
+        py={10}
+      >{children}</Box>
       <Footer />
     </>
   );
