@@ -13,9 +13,13 @@ const WhyUsPriority = ({ imgSrc, title }: IProps) => {
         alignItems="center"
         sx={{
           background: "linear-gradient(94.06deg, #FFB629 -1.21%, #FFDA56 58.66%, #FFD7A6 116.84%)",
-          width: 50,
-          height: 50,
-          borderRadius: '50%'
+          width: "47px",
+          minWidth: "47px",
+          height: "47px",
+          minHeight: "47px",
+          borderRadius: '50%',
+          p: 1,
+          boxSizing: 'border-box'
         }}
       >
         <img src={imgSrc} />
