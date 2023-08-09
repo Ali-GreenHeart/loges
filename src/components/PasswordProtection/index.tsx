@@ -1,9 +1,8 @@
-import { Box, Container, Stack, TextField } from "@mui/material";
-import React from "react";
-import Button from "../Button";
+import { Container, Stack, TextField } from "@mui/material";
+import passwordImg from "../../assets/banner/password-protection.png";
 import theme from "../../theme";
+import Button from "../Button";
 import PageContainer from "../PageContainer";
-import passwordImg from "../../assets/banner/password-protection.png"
 
 const PasswordProtection = () => {
   return (
@@ -14,20 +13,15 @@ const PasswordProtection = () => {
         bannerSubtitle="Protection"
       >
         <Container>
-          <Box sx={{
-            fontSize: { sm: "16px", md: "30px" },
+          <Stack sx={{
             margin: "0",
             backgroundColor: theme.palette.secondary.main,
             color: "white",
-            padding: "100px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "20px",
+            py: 6,
             justifyContent: 'center',
             alignItems: 'center',
-
           }}>
-            <h1>Enter Password</h1>
+            <h1 style={{ fontSize: "30px" }}>Enter Password</h1>
             <Stack
               sx={{
                 flexDirection: { xs: "column", md: "row" },
@@ -35,11 +29,13 @@ const PasswordProtection = () => {
               }}
             >
               <TextField
+                sx={{ minWidth: 250 }}
+                fullWidth
                 label="Enter Your Password"
               />
-              <Button title="submit" isPrimary={true}></Button>
+              <Button title="submit" isPrimary></Button>
             </Stack>
-          </Box>
+          </Stack>
         </Container>
       </PageContainer>
     </>
