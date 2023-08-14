@@ -17,22 +17,27 @@ const AboutUs = () => {
             container
             spacing={5}
             justifyContent={{ md: "space-evenly", lg: "center" }}
+            alignItems={{ xs: "center", lg: 'stretch' }}
           >
-            <Grid xs={12} md={5} lg={5} item sx={mainImgContainerStyle}>
-              <img src={MainImg} style={{ width: "100%" }} alt="worker" />
-              <img
-                className="about_us_texture_img"
-                src={SecondImg}
-                alt="state"
-                style={{
-                  position: "absolute",
-                  bottom: -40,
-                  right: -60,
-                  width: "45%",
-                  height: "60%",
-                  zIndex: 3,
-                }}
-              />
+            <Grid xs={12} md={5} lg={5} item >
+              <Box sx={mainImgContainerStyle}>
+                <img src={MainImg} style={{ width: "100%" }} alt="scania TIR" />
+                <img
+                  className="about_us_texture_img"
+                  src={SecondImg}
+                  alt="state"
+                  style={{
+                    position: "absolute",
+                    bottom: -40,
+                    right: -60,
+                    width: "45%",
+                    height: "60%",
+                    zIndex: 3,
+                    objectFit: 'cover',
+                    objectPosition: 'top'
+                  }}
+                />
+              </Box>
             </Grid>
 
             <Grid xs={12} md={5} lg={5} item>
