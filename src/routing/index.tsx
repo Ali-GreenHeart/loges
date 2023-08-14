@@ -5,6 +5,7 @@ import PasswordProtection from "../components/PasswordProtection";
 import Project from "../pages/Project";
 import Liceses from "../components/licenses";
 import ServiceSingle from "../pages/ServiceSingle";
+import ChangeLog from "../pages/ChangeLog";
 
 const HomePage = lazy(() => import("../pages/Home"));
 
@@ -18,7 +19,7 @@ const WebRouting = () => {
                 <Route path="/project" element={<Project />} />
                 <Route path="/licenses" element={<Liceses />} />
                 <Route path="/service-single" element={<ServiceSingle />} />
-
+                <Route path="/change-log" element={<ChangeLog />} />
             </Routes>
         </Suspense>
     );
