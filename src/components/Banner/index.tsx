@@ -1,5 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import SectionHeader from "../SectionHeader";
+import ResponsiveAppBar from "./Appbar";
 
 interface IProps {
   bannerImage?: string;
@@ -23,6 +24,7 @@ const Banner = ({ bannerImage, bannerTitle, bannerSubtitle }: IProps) => {
             height: '100%'
           }}
         >
+          <ResponsiveAppBar />
           <Container sx={{
             display: 'flex',
             flexDirection: 'column',
