@@ -12,92 +12,114 @@ import Sponsors from "../Sponsors";
 const FAQ = () => {
   return (
     <>
-      
-        <>
-        <Stack
+
+      <>
+        <Box
           sx={{
             backgroundColor: "#F4F4F4",
             minHeight: "650px",
-            flexWrap: "nowrap",
+            position: 'relative',
+            "& > img": {
+              display: { xs: 'none', lg: 'inline-block' },
+              height: '100%'
+            }
           }}
         >
+          <img src={bcgimage} alt="" className="shekil" />
           <Container>
-            <Stack
+            <Grid
+              container
               sx={{
                 position: "relative",
                 alignItems: "center",
                 gap: "30px",
                 padding: "100px 0px ",
-                flexDirection: { xs: "column", lg: "row" },
+                flexDirection: { xs: "column", md: "row" },
               }}
             >
-              <Box
+              <Grid
+                item
+                xs={12}
+                md={6}
                 sx={{
-                  width: { xs: "100%", lg: "50%" },
+                  "& *": {
+                    textAlign: 'left',
+                  },
+                  "& > div> p": {
+                    marginLeft: '0'
+                  }
                 }}
               >
                 <SectionHeader
-                  key={""}
                   heading="FAQ"
                   subheading="Frequently Asked Questions"
                 ></SectionHeader>
                 <BasicAccordion />
-              </Box>
-              <Stack
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                md={5}
                 sx={{
-                  display: { xs: "none", lg: "block" },
-                  position:"relative",
+                  position: "relative",
                 }}
               >
-                <img src={bcgimage} alt="" className="shekil" />
-              </Stack>
-              <Box
-                className="background"
-                sx={{
-                  width:"100%",
-                  display: "flex",
-                  flexDirection: { xs: "column", lg: "row" },
-                }}
-              >
-                <Stack
+                <Box
+                  className="background"
                   sx={{
-                    marginTop: "50px",
-                    zIndex: 2,
-                    width:{xs:"100%", lg:"50%"},
-                    padding: "50px",
-                    backgroundColor: "#091242",
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: { xs: "column", lg: "row" },
                   }}
                 >
-                  <SectionHeader
-                    heading="Let's Talk"
-                    subheading="You Need Any Help? Get Free Consultation"
-                  />
-                  <div className="connect">
-                    <main className="phone">
-                      <img src={vector} alt="" />
-                    </main>
-                    <aside className="parent">
-                      <p>Have Any Questions</p>
-                      <p>(00) 112 365 489</p>
-                    </aside>
-                  </div>
-                  <div
-                    style={{
-                      width: "250px",
-                      height: "50px",
-                      marginTop: "20px",
+                  <Stack
+                    sx={{
+                      marginTop: "50px",
+                      zIndex: 2,
+                      width: "100%",
+                      padding: "50px",
+                      backgroundColor: "#091242",
+                      color: 'white',
+                      "& *": {
+                        textAlign: 'left',
+                        marginLeft: 0
+                      },
+                      "& > div> p": {
+                        background: '#111C55'
+                      }
                     }}
                   >
-                    <Button isPrimary title="Contact us" key={""} />
-                  </div>
-                </Stack>
-              </Box>
-            </Stack>
+                    <SectionHeader
+                      heading="Let's Talk"
+                      subheading="You Need Any Help? Get Free Consultation"
+                    />
+                    <div className="connect">
+                      <main className="phone">
+                        <img src={vector} alt="" />
+                      </main>
+                      <aside className="parent">
+                        <p>Have Any Questions</p>
+                        <p>(00) 112 365 489</p>
+                      </aside>
+                    </div>
+                    <div
+                      style={{
+                        width: "250px",
+                        height: "50px",
+                        marginTop: "20px",
+                      }}
+                    >
+                      <Button isPrimary title="Contact us" key={""} />
+                    </div>
+                  </Stack>
+                </Box>
+              </Grid>
+            </Grid>
           </Container>
-        </Stack>
-        <Sponsors/>
-        </>
-      
+        </Box>
+        <Sponsors />
+      </>
+
     </>
   );
 };
