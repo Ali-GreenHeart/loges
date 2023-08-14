@@ -71,33 +71,33 @@ const ServiceSingle = () => {
 
           <Grid container mt={12}>
             <Grid item md={6} xs={12}>
-                <Box maxWidth={450}>
+              <Box maxWidth={450}>
 
-              <Typography variant="h5" component="h3" fontWeight={600}>
-                Benefit of Service
-              </Typography>
-              <Typography component="p" my={3}>
-                Sed ut perspiciatis, unde omnis iste natu volupta temaccu
-                santium doloremque laudantium, totam rem quae ab illo inventore
-                veritatis.
-              </Typography>
-              <Stack py={1}>
-                {services.map((service) => {
+                <Typography variant="h5" component="h3" fontWeight={600}>
+                  Benefit of Service
+                </Typography>
+                <Typography component="p" my={3}>
+                  Sed ut perspiciatis, unde omnis iste natu volupta temaccu
+                  santium doloremque laudantium, totam rem quae ab illo inventore
+                  veritatis.
+                </Typography>
+                <Stack py={1}>
+                  {services.map((service) => {
                     return (
-                        <Typography
+                      <Typography
                         pt={1}
                         key={service.key}
                         variant="h6"
                         component="h5"
                         fontWeight={600}
                         color="rgba(28, 31, 53, 1)"
-                        >
-                      <ArrowForward sx={{fontSize:18}} /> {service.title}
-                    </Typography>
-                  );
-                })}
-              </Stack>
-                </Box>
+                      >
+                        <ArrowForward sx={{ fontSize: 18 }} /> {service.title}
+                      </Typography>
+                    );
+                  })}
+                </Stack>
+              </Box>
             </Grid>
 
             <Grid item md={6} xs={12}>
@@ -109,10 +109,10 @@ const ServiceSingle = () => {
 
           <Grid container mt={15}>
             <Grid item md={7} xs={12}>
-             <VideoPlayer url="https://www.youtube.com/watch?v=q5UWVgxt3gk"/>
+              <VideoPlayer url="https://www.youtube.com/watch?v=q5UWVgxt3gk" />
             </Grid>
             <Grid item md={5} xs={12} mt={4} px={6}>
-              <Stack gap={3} maxWidth={400}>
+              <Stack gap={3} maxWidth={{ xs: 'unset', md: 400 }}>
                 <Typography variant="h5" component="h3" fontWeight={600}>
                   How It Works
                 </Typography>
