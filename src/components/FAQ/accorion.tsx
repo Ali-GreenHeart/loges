@@ -1,15 +1,14 @@
-import * as React from "react";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Typography from "@mui/material/Typography";
 
 export default function BasicAccordion() {
   return (
     <div>
       <Accordion sx={{
-        backgroundColor:"transparent"
+        backgroundColor: "transparent"
       }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -20,7 +19,7 @@ export default function BasicAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{
-            color:"#666C89"
+            color: "#666C89"
           }}>
             Leverage agile frameworks to provide a robust synopsis for strategy
             foster collaborative thinking to further the overall value
@@ -29,7 +28,7 @@ export default function BasicAccordion() {
         </AccordionDetails>
       </Accordion>
       <Accordion sx={{
-        backgroundColor:"transparent"
+        backgroundColor: "transparent"
       }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -40,7 +39,7 @@ export default function BasicAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{
-            color:"#666C89"
+            color: "#666C89"
           }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget.
@@ -48,7 +47,7 @@ export default function BasicAccordion() {
         </AccordionDetails>
       </Accordion>
       <Accordion sx={{
-        backgroundColor:"transparent"
+        backgroundColor: "transparent"
       }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -59,7 +58,7 @@ export default function BasicAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{
-            color:"#666C89"
+            color: "#666C89"
           }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget.
@@ -67,7 +66,7 @@ export default function BasicAccordion() {
         </AccordionDetails>
       </Accordion>
       <Accordion sx={{
-        backgroundColor:"transparent"
+        backgroundColor: "transparent"
       }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -78,7 +77,7 @@ export default function BasicAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{
-            color:"#666C89"
+            color: "#666C89"
           }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget.

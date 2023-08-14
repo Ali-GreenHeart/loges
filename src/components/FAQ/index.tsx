@@ -1,14 +1,11 @@
-import React from "react";
-import PageContainer from "../PageContainer";
 import { Box, Container, Grid, Stack } from "@mui/material";
-import SectionHeader from "../SectionHeader";
-import BasicAccordion from "./accorion";
-import "./module.css";
+import bcgimage from "../../assets/FAQqaqaw/Photo.svg";
 import vector from "../../assets/FAQqaqaw/Vector.png";
 import Button from "../Button";
-import bcgimage from "../../assets/FAQqaqaw/Photo.svg";
-import Sponsores from "../Sponsors";
+import SectionHeader from "../SectionHeader";
 import Sponsors from "../Sponsors";
+import BasicAccordion from "./accorion";
+import "./module.css";
 const FAQ = () => {
   return (
     <>
