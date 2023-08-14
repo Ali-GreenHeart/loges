@@ -1,11 +1,9 @@
 import { Box, Container, Stack } from "@mui/material";
-import React from "react";
+import Button from "../Button";
 import mail from "./logo.images/Icon.mail.svg";
 import clocks from "./logo.images/Icon.svg";
 import phone from "./logo.images/icon.phone.svg";
 import "./module.css";
-import Button from "../Button";
-import { Padding } from "@mui/icons-material";
 
 const Contact = () => {
   return (
@@ -14,9 +12,10 @@ const Contact = () => {
         className="mainbox"
         sx={{
           padding: "20px",
+          textAlign: 'center'
         }}
       >
-        <div className="firstDiv">Contact</div>
+        <div className="firstDiv" style={{ paddingLeft: '8px', width: 'fit-content', margin: '0 auto' }}>Contact</div>
         <h1>Get in touch with us</h1>
         <p className="firstP">
           Leverage agile frameworks to provide a robust synopsis for strategy
@@ -79,19 +78,10 @@ const Contact = () => {
               <input type="text" placeholder="City*" required />
             </Stack>
           </Box>
-          <textarea placeholder="Your Message"></textarea>
-          <Stack
-            sx={{
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <button type="submit" className="elshad">
+          <textarea style={{ marginBottom: 20 }} placeholder="Your Message"></textarea>
 
-            <Button title={"Submit Message"} isPrimary={true}></Button>
-            </button>
-          </Stack>
-          
+          <Button type="submit" title={"Submit Message"} isPrimary={true}></Button>
+
         </form>
       </Box>
     </Container>
