@@ -13,6 +13,7 @@ import SectionHeader from "../../components/SectionHeader";
 import Members from "./Members";
 import userIcon from "../../assets/Team-Page/UserIcon.png";
 import HourglassIcon from "../../assets/Team-Page/HourglassIcon .png";
+import Sponsors from "./Sponsors";
 
 function Team() {
   return (
@@ -194,6 +195,7 @@ function Team() {
             </Grid>
           </Grid>
         </Container>
+        <Sponsors/>
       </Container>
     </PageContainer>
   );
