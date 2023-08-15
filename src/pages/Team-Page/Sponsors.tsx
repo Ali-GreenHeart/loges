@@ -10,13 +10,14 @@ import "./module.css";
 const Sponsors = () => {
   return (
     <>
-      <Container>
+      <Container >
         <Stack
           sx={{
             marginTop: "50px",
-            flexDirection: { xs: "column", md: "row" },
+            flexDirection:"row",
             width: "100%",
             alignItems: "center",
+            flexWrap:"wrap"
           }}
         >
           <Box
@@ -28,7 +29,7 @@ const Sponsors = () => {
               border: "1px solid #4E5683",
               width: { xs: "100%", sm: "50%", md: "25%" },
               height: "235px",
-              position: "relative", // Kutunun içinde pozisyon ayarı
+              position: "relative", 
             }}
           >
             <img
