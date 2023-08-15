@@ -13,7 +13,7 @@ function VideoPlayer({url}:IProps) {
       light
       controls
       playIcon={
-          <img src={servicePlayButton} alt="Play" />
+          <img src={servicePlayButton} alt="Play"  style={{width:150}}/>
       }
       width="100%"
     />

@@ -42,7 +42,9 @@ const ServiceSingle = () => {
             },
           }}
         >
-          <img src={serviceShip} />
+          <Box>
+          <img src={serviceShip} style={{width:"100%"}} />
+          </Box>
           <WhyUsPriority imgSrc={serviceIcon} title="Sea Transport Service" />
           <Typography component="p">
             Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
