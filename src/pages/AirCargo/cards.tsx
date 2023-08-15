@@ -43,7 +43,7 @@ function Card() {
           </Stack>
         </Typography>
       ))}
-
+     
       <Typography fontSize={35} fontWeight="bold">
         Related Project
       </Typography>
