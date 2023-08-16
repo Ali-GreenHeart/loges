@@ -1,5 +1,4 @@
 import { Box, Container, Typography } from "@mui/material";
-import SectionHeader from "../SectionHeader";
 import ResponsiveAppBar from "./Appbar";
 
 interface IProps {
