@@ -4,7 +4,7 @@ import Header from "../Header";
 import Banner from "../Banner";
 
 interface IProps {
-  children: React.ReactElement;
+  children: React.ReactElement | React.ReactElement[];
   bannerImage?: string;
   bannerTitle?: string;
   bannerSubtitle?: string;
