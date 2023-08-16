@@ -141,49 +141,49 @@ function Team() {
                     overall value proposition.
                   </Typography>
                   <Grid container spacing={2}>
-  <Grid item xs={12} sm={6}>
-    <Stack
-      direction="row"
-      alignItems="center"
-      spacing={2}
-      sx={{ marginBottom: { xs: 2, sm: 0 } }}
-    >
-      <img src={userIcon} alt="UserIcon" />
-      <Typography
-        variant="h5"
-        component="h5"
-        sx={{ fontWeight: 700, textTransform: "capitalize" }}
-      >
-        Our Vision
-      </Typography>
-    </Stack>
-    <Typography color="#666C89">
-      Leverage agile frameworks to provide a robust synopsis for strategy
-      foster.
-    </Typography>
-  </Grid>
-  <Grid item xs={12} sm={6}>
-    <Stack
-      direction="row"
-      alignItems="center"
-      spacing={2}
-      sx={{ marginBottom: { xs: 2, sm: 0 } }}
-    >
-      <img src={HourglassIcon} alt="HourglassIcon" />
-      <Typography
-        variant="h5"
-        component="h5"
-        sx={{ fontWeight: 700, textTransform: "capitalize" }}
-      >
-        Estimate Shipping
-      </Typography>
-    </Stack>
-    <Typography color="#666C89">
-      Leverage agile frameworks to provide a robust synopsis for strategy
-      foster.
-    </Typography>
-  </Grid>
-</Grid>
+                    <Grid item xs={12} sm={6}>
+                      <Stack
+                        direction="row"
+                        alignItems="center"
+                        spacing={2}
+                        sx={{ marginBottom: { xs: 2, sm: 0 } }}
+                      >
+                        <img src={userIcon} alt="UserIcon" />
+                        <Typography
+                          variant="h5"
+                          component="h5"
+                          sx={{ fontWeight: 700, textTransform: "capitalize" }}
+                        >
+                          Our Vision
+                        </Typography>
+                      </Stack>
+                      <Typography color="#666C89">
+                        Leverage agile frameworks to provide a robust synopsis for strategy
+                        foster.
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                      <Stack
+                        direction="row"
+                        alignItems="center"
+                        spacing={2}
+                        sx={{ marginBottom: { xs: 2, sm: 0 } }}
+                      >
+                        <img src={HourglassIcon} alt="HourglassIcon" />
+                        <Typography
+                          variant="h5"
+                          component="h5"
+                          sx={{ fontWeight: 700, textTransform: "capitalize" }}
+                        >
+                          Estimate Shipping
+                        </Typography>
+                      </Stack>
+                      <Typography color="#666C89">
+                        Leverage agile frameworks to provide a robust synopsis for strategy
+                        foster.
+                      </Typography>
+                    </Grid>
+                  </Grid>
 
                 </Stack>
                 <Stack
@@ -195,7 +195,7 @@ function Team() {
             </Grid>
           </Grid>
         </Container>
-        <Sponsors/>
+        <Sponsors />
       </Container>
     </PageContainer>
   );
