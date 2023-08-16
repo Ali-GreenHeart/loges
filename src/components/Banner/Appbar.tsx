@@ -5,17 +5,17 @@ import {
   Twitter,
 } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Button, Divider, Stack } from "@mui/material";
+import { Button, Stack } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
 import * as React from "react";
 import { Link } from "react-router-dom";
 import NavLink from "./NavLink";
+import MenuLink from "./MenuLink";
 
 const pages = [
   {
@@ -35,8 +35,53 @@ const pages = [
     pages: [
       {
         id: 0,
-        to: "/test",
-        page: "Test",
+        to: "/services",
+        page: "Services",
+      },
+      {
+        id: 1,
+        to: "/service-single",
+        page: "Service Single",
+      },
+      {
+        id: 2,
+        to: "/project-single",
+        page: "Project Single",
+      },
+      {
+        id: 3,
+        to: "/blog",
+        page: "Blog",
+      },
+      {
+        id: 4,
+        to: "/blog-single",
+        page: "Blog Single",
+      },
+      {
+        id: 5,
+        to: "/team",
+        page: "Team",
+      },
+      {
+        id: 6,
+        to: "/pricing",
+        page: "Pricing",
+      },
+      {
+        id: 7,
+        to: "/change-log",
+        page: "Change Log",
+      },
+      {
+        id: 8,
+        to: "/licenses",
+        page: "Licences",
+      },
+      {
+        id: 9,
+        to: "/password-protection",
+        page: "Protection",
       },
     ],
   },
@@ -103,10 +148,14 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map(({ id, page, to }) => (
-                <MenuItem key={id} onClick={handleCloseNavMenu}>
-                  <Link to={to}>{page}</Link>
-                </MenuItem>
+              {pages.map(({ id, page, to, pages }) => (
+                <MenuLink
+                  key={id}
+                  handleCloseNavMenu={handleCloseNavMenu}
+                  page={page}
+                  pages={pages}
+                  to={to}
+                />
               ))}
             </Menu>
           </Box>
@@ -120,8 +169,9 @@ function ResponsiveAppBar() {
                 color: "white",
                 display: "block",
                 pt: "24px",
+                borderBottom: "2px solid transparent",
                 "&:hover": {
-                  borderBottom: "2px solid",
+                  borderBottomColor: "inherit",
                 },
               },
             }}
@@ -136,7 +186,6 @@ function ResponsiveAppBar() {
                 handleCloseNavMenu={handleCloseNavMenu}
                 pagesLength={pages.length}
               />
-
             ))}
           </Box>
 
