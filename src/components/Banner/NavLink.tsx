@@ -60,13 +60,13 @@ const NavLink = ({
                 top: 60,
                 backgroundColor: "secondary.main",
                 "&::-webkit-scrollbar": {
-                  width: "8px",
+                  width: "4px",
                 },
                 "&::-webkit-scrollbar-thumb": {
                   backgroundColor: "rgba(0, 0, 0, 0.2)",
                 },
                 "&::-webkit-scrollbar-track": {
-                  backgroundColor: "transparent",
+                  backgroundColor: "rgba(255, 255, 255, 0.7)",
                 },
               }}
             >
