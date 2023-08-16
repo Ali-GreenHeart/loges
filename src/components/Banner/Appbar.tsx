@@ -169,8 +169,9 @@ function ResponsiveAppBar() {
                 color: "white",
                 display: "block",
                 pt: "24px",
+                borderBottom: "2px solid transparent",
                 "&:hover": {
-                  borderBottom: "2px solid",
+                  borderBottomColor: "inherit",
                 },
               },
             }}
