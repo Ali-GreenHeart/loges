@@ -20,7 +20,7 @@ const Banner = ({ bannerImage, bannerTitle, bannerSubtitle, customizedBanner = u
       >
         <Box
           sx={{
-            background: "linear-gradient(90.96deg, #032D5F 18.62%, rgba(9, 18, 66, 0.3) 51.58%)",
+            background: customizedBanner ? "linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%)" : "linear-gradient(90.96deg, #032D5F 18.62%, rgba(9, 18, 66, 0.3) 51.58%)",
             height: '100%'
           }}
         >
