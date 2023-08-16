@@ -4,12 +4,13 @@ import MuiButton from "@mui/material/Button"
 interface IProps {
     title: string;
     isPrimary: boolean;
+    type?: "button" | "reset" | "submit";
 }
 
 
-const Button = ({ title, isPrimary = false }: IProps) => {
+const Button = ({ title, isPrimary = false, type = "button" }: IProps) => {
     return (
-        <MuiButton variant="contained" color={isPrimary ? "primary" : "secondary"}
+        <MuiButton type={type} variant="contained" color={isPrimary ? "primary" : "secondary"}
             sx={{
                 textTransform: 'capitalize',
                 p: 2,
