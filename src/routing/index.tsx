@@ -8,6 +8,7 @@ import ServiceSingle from "../pages/ServiceSingle";
 import ChangeLog from "../pages/ChangeLog";
 
 import TeamPage from "../pages/Team-Page";
+import BlogSingle from "../pages/BlogSingle";
 
 const HomePage = lazy(() => import("../pages/Home"));
 
@@ -23,6 +24,7 @@ const WebRouting = () => {
         <Route path="/service-single" element={<ServiceSingle />} />
         <Route path="/change-log" element={<ChangeLog />} />
         <Route path="/team" element={<TeamPage />} />
+        <Route path="/blogs/:id" element={<BlogSingle />} />
       </Routes>
     </Suspense>
   );
