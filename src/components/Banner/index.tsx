@@ -5,9 +5,10 @@ interface IProps {
   bannerImage?: string;
   bannerTitle?: string;
   bannerSubtitle?: string;
+  customizedBanner?: undefined | React.ReactElement;
 }
 
-const Banner = ({ bannerImage, bannerTitle, bannerSubtitle }: IProps) => {
+const Banner = ({ bannerImage, bannerTitle, bannerSubtitle, customizedBanner = undefined }: IProps) => {
   return (
     <>
       <Box
@@ -24,24 +25,27 @@ const Banner = ({ bannerImage, bannerTitle, bannerSubtitle }: IProps) => {
           }}
         >
           <ResponsiveAppBar />
-          <Container sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            justifyContent: 'center',
-            height: '100%',
-            color: 'white'
-          }}>
-            <Typography
-              component="p"
-              bgcolor="rgba(9, 18, 66, 0.3)"
-              sx={(t) => ({ borderLeft: `4px solid ${t.palette.primary.main}`, fontSize: 14, p: "3px", px: 2 })}>
-              {bannerSubtitle}
-            </Typography>
-            <Typography my={3} textAlign="center" variant="h4" component="h4" sx={{ fontWeight: 700, textTransform: 'capitalize' }}>
-              {bannerTitle}
-            </Typography>
-          </Container>
+
+          {
+            customizedBanner || <Container sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start',
+              justifyContent: 'center',
+              height: '100%',
+              color: 'white'
+            }}>
+              <Typography
+                component="p"
+                bgcolor="rgba(9, 18, 66, 0.3)"
+                sx={(t) => ({ borderLeft: `4px solid ${t.palette.primary.main}`, fontSize: 14, p: "3px", px: 2 })}>
+                {bannerSubtitle}
+              </Typography>
+              <Typography my={3} textAlign="center" variant="h4" component="h4" sx={{ fontWeight: 700, textTransform: 'capitalize' }}>
+                {bannerTitle}
+              </Typography>
+            </Container>
+          }
         </Box>
       </Box>
     </>

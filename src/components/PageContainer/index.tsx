@@ -8,6 +8,7 @@ interface IProps {
   bannerImage?: string;
   bannerTitle?: string;
   bannerSubtitle?: string;
+  customizedBanner?: undefined | React.ReactElement;
 }
 
 const PageContainer = ({
@@ -15,6 +16,7 @@ const PageContainer = ({
   bannerImage,
   bannerTitle,
   bannerSubtitle,
+  customizedBanner = undefined
 }: IProps) => {
   return (
     <>
@@ -23,6 +25,7 @@ const PageContainer = ({
         bannerImage={bannerImage}
         bannerTitle={bannerTitle}
         bannerSubtitle={bannerSubtitle}
+        customizedBanner={customizedBanner}
       />
       <Box component="main"
         py={10}
