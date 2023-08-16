@@ -45,7 +45,7 @@ const NavLink = ({
           >
             <Stack flexDirection="row" sx={{ position: "relative" }}>
               {page}
-              {!pg ? <ExpandMore /> : <ExpandLess />}
+              {pg ? <ExpandLess /> : <ExpandMore />}
             </Stack>
           </Link>
           {pg && (
