@@ -16,7 +16,7 @@ const WebRouting = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/password-protection" element={<PasswordProtection />} />
         <Route path="/project" element={<Project />} />
-        <Route path="/Team" element={<TeamPage />} />
+        <Route path="/team" element={<TeamPage />} />
       </Routes>
     </Suspense>
   );
