@@ -1,17 +1,55 @@
-import { Container, IconButton, Stack } from "@mui/material";
-import serviceBanner from "../../assets/banner/service-single-banner.png";
-import PageContainer from "../../components/PageContainer";
 import EastIcon from "@mui/icons-material/East";
 import WestIcon from "@mui/icons-material/West";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import "./styles.css";
-// Import Swiper styles
-import "swiper/css";
+import { Container, IconButton, Stack } from "@mui/material";
 import { useRef, useState } from "react";
+import "swiper/css";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import serviceBanner from "../../assets/banner/service-single-banner.png";
+import PageContainer from "../../components/PageContainer";
+import SectionHeader from "../../components/SectionHeader";
+import Slide from "../../components/Slide";
+import adam1 from "../../assets/slider/adam1.png"
+import adam2 from "../../assets/slider/adam2.png"
+
+
+const testimonials = [
+  {
+    id: 0,
+    imgSrc: adam1,
+    fullName: "Kathleen Smith",
+    company: "Fuel Company",
+    description: "Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+    rating: 5
+  },
+  {
+    id: 1,
+    imgSrc: adam2,
+    fullName: "sfbdKathleen Smith",
+    company: "Fueasdsdl Company",
+    description: "Leverzdxfvbdfage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+    rating: 3
+  },
+  {
+    id: 3,
+    imgSrc: adam1,
+    fullName: "yfhdgKathleen Smith",
+    company: "Fugjhmnfbgel Company",
+    description: "Legmnhgverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+    rating: 5
+  },
+  {
+    id: 4,
+    imgSrc: adam2,
+    fullName: "fhnvbyfhdgKathleen Smith",
+    company: "j,hmjFugjhmnfbgel Company",
+    description: "wesdfewLegmnhgverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+    rating: 2
+  },
+]
 
 const Services = () => {
-  const [init, setInit] = useState(false);
+  const [init, setInit] = useState(false)
   const [isFirstSlide, setIsFirstSlide] = useState(true);
   const [isLastSlide, setIsLastSlide] = useState(false);
   const prevButtonRef = useRef(null);
@@ -25,23 +63,47 @@ const Services = () => {
         <Stack
           marginBottom={"40px"}
           flexDirection={"row"}
-          justifyContent={"flex-end"}>
-          <IconButton
-            ref={prevButtonRef}
-            className={`button ${isFirstSlide && "disabled"}`}>
-            <WestIcon fontSize="small" />
-          </IconButton>
-          <IconButton
-            ref={nextButtonRef}
-            className={`button ${isLastSlide && "disabled"}`}>
-            <EastIcon fontSize="small" />
-          </IconButton>
+          justifyContent={"space-between"}
+          alignItems="center"
+          flexWrap={"wrap"}
+        >
+          <SectionHeader
+            isCentered={false}
+            subheading="What Our Customer Say"
+            heading="Testimonial"
+          />
+          <div>
+            <IconButton
+              disableRipple
+              sx={() => ({
+                color: isFirstSlide ? "secondary.main" : "white",
+                "&, &:hover": {
+                  backgroundColor: isFirstSlide ? "primary.main" : "secondary.main"
+                }
+              })
+              }
+              ref={prevButtonRef}
+            >
+              <WestIcon fontSize="small" />
+            </IconButton>
+            <IconButton
+              disableRipple
+              ref={nextButtonRef}
+              sx={() => ({
+                color: isLastSlide ? "secondary.main" : "white",
+                "&, &:hover": {
+                  backgroundColor: isLastSlide ? "primary.main" : "secondary.main"
+                }
+              })}>
+              <EastIcon fontSize="small" />
+            </IconButton>
+          </div>
         </Stack>
         <Swiper
-          slidesPerView={2}
           onInit={() => setInit(true)}
+          slidesPerView={2}
           breakpoints={{
-            320: {
+            0: {
               slidesPerView: 1,
             },
             900: {
@@ -63,15 +125,16 @@ const Services = () => {
             setIsFirstSlide(isBeginning);
             setIsLastSlide(isEnd);
           }}>
-          <SwiperSlide>
-            <div className="div"></div>
-          </SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
+          {
+            testimonials.map((slide, index) => {
+              return (
+                <SwiperSlide><Slide {...slide} key={slide.id} isDark={index % 2 === 1} /></SwiperSlide>
+              )
+            })
+          }
         </Swiper>
       </Container>
-    </PageContainer>
+    </PageContainer >
   );
 };
 
