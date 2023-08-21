@@ -1,11 +1,11 @@
 import PageContainer from "../../components/PageContainer";
-import PlaneSection from "../../components/Plane";
+import Testimonial from "../../components/Testimonial";
 
 const HomePage = () => {
   return (
     <>
       <PageContainer>
-        <PlaneSection />
+       <Testimonial/>
       </PageContainer>
     </>
   );
