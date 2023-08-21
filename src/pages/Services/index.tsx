@@ -7,8 +7,8 @@ const Services = () => {
   return (
     <PageContainer
       bannerImage={serviceBanner}
-      bannerTitle="Service Details"
-      bannerSubtitle="Service Single">
+      bannerSubtitle="Services"
+      bannerTitle="Our Logistics Service">
       <Slider />
     </PageContainer >
   );
