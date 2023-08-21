@@ -63,7 +63,9 @@ const Services = () => {
             setIsFirstSlide(isBeginning);
             setIsLastSlide(isEnd);
           }}>
-          <SwiperSlide>Slide 1</SwiperSlide>
+          <SwiperSlide>
+            <div className="div"></div>
+          </SwiperSlide>
           <SwiperSlide>Slide 2</SwiperSlide>
           <SwiperSlide>Slide 3</SwiperSlide>
           <SwiperSlide>Slide 4</SwiperSlide>
