@@ -3,7 +3,7 @@ import WestIcon from "@mui/icons-material/West";
 import { Container, IconButton, Stack } from "@mui/material";
 import { useRef, useState } from "react";
 import "swiper/css";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import adam1 from "../../assets/slider/adam1.png";
 import adam2 from "../../assets/slider/adam2.png";
@@ -94,6 +94,10 @@ const Slider = () => {
                 </div>
             </Stack>
             <Swiper
+                autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                }}
                 onInit={() => setInit(true)}
                 slidesPerView={2}
                 breakpoints={{
@@ -104,7 +108,7 @@ const Slider = () => {
                         slidesPerView: 2,
                     },
                 }}
-                modules={[Navigation]}
+                modules={[Navigation, Autoplay]}
                 navigation={{
                     prevEl: prevButtonRef.current,
                     nextEl: nextButtonRef.current,
@@ -127,7 +131,7 @@ const Slider = () => {
                     })
                 }
             </Swiper>
-        </Container>
+        </Container >
     );
 };
 
