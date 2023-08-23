@@ -60,34 +60,39 @@ const ProjectPage = () => {
       bannerImage={BannerSinglePage}
       bannerTitle="Air Cargo Transportation"
       bannerSubtitle="Warehouse Transportation"
+      py={0}
     >
-      <Container >
-        <Grid container gap={10} >
-          <Grid item > 
-            <img src={Truck} alt="Truck" />
+      <Box sx={{ backgroundColor: "#F4F4F4", py: 10 }}>
+        <Container >
+          <Grid container gap={6} >
+            <Grid item xs={12} md={6} lg={7}>
+              <img style={{ width: '100%' }} src={Truck} alt="Truck" />
+            </Grid>
+            <Grid item xs={12} md={5} lg={4}>
+              <Typography variant="h4" component="h4" fontWeight={700}>
+                Project Details
+              </Typography>
+              <Typography variant="body1" component="p">
+                <span style={{ fontWeight: 550 }}>Customer:</span>{" "}
+                {projectDetails.customer}
+                <br />
+                <span style={{ fontWeight: 550 }}>Category:</span>{" "}
+                {projectDetails.category}
+                <br />
+                <span style={{ fontWeight: 550 }}>Date:</span>{" "}
+                {projectDetails.date}
+                <br />
+                <span style={{ fontWeight: 550 }}>Status:</span>{" "}
+                {projectDetails.status}
+                <br />
+                <span style={{ fontWeight: 550 }}>Tags:</span>{" "}
+                {projectDetails.tags}
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid item>
-            <Typography variant="h4" component="h4" fontWeight={700}>
-              Project Details
-            </Typography>
-            <Typography variant="body1" component="p">
-              <span style={{ fontWeight: 550 }}>Customer:</span>{" "}
-              {projectDetails.customer}
-              <br />
-              <span style={{ fontWeight: 550 }}>Category:</span>{" "}
-              {projectDetails.category}
-              <br />
-              <span style={{ fontWeight: 550 }}>Date:</span>{" "}
-              {projectDetails.date}
-              <br />
-              <span style={{ fontWeight: 550 }}>Status:</span>{" "}
-              {projectDetails.status}
-              <br />
-              <span style={{ fontWeight: 550 }}>Tags:</span>{" "}
-              {projectDetails.tags}
-            </Typography>
-          </Grid>
-        </Grid>
+        </Container>
+      </Box>
+      <Container>
         <Typography variant="h4" component="h4" fontWeight={600} py={3}>
           Wharehouse Transportation
         </Typography>
@@ -120,7 +125,7 @@ const ProjectPage = () => {
             })}
           </Box>
         </Grid>
-        <Grid mt={15} md={7} xs={12}>
+        <Grid item mt={15} md={7} xs={12}>
           <Typography variant="h4" component="h4" fontWeight={600}>
             Our Project Transportation
           </Typography>
@@ -136,18 +141,25 @@ const ProjectPage = () => {
             tincidunt nunc posuere.
           </Typography>
         </Grid>
-        <VideoPlayer url="https://youtu.be/_g-fn29eHLE" />
+        <Box sx={{
+          height: 500, backgroundColor: 'red',
+          '&>div': {
+            height: '100% !important'
+          }
+        }}>
+          <VideoPlayer url="https://youtu.be/_g-fn29eHLE" />
+        </Box>
         <Box py={8}>
 
-         <Typography variant="h4" component="h4" fontWeight={600}>Related Project</Typography>
-        <Stack flexDirection="row" flexWrap="wrap" columnGap={4} rowGap={4}>
-          {imgPath.map((img) => {
+          <Typography variant="h4" component="h4" mb={5} fontWeight={600}>Related Project</Typography>
+          <Stack flexDirection="row" flexWrap="wrap" columnGap={4} rowGap={4}>
+            {imgPath.map((img) => {
               return <WhyInfo key={img?.src} imgSrc={img?.src} />;
             })}
-        </Stack>
-            </Box>
+          </Stack>
+        </Box>
       </Container>
-    </PageContainer>
+    </PageContainer >
   );
 };
 
