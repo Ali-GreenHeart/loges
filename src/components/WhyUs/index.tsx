@@ -9,14 +9,14 @@ import StatisticFooter from "../StatisticFooter";
 
 const WhyUs = () => {
   return (
-    <Container sx={{ my: 7, backgroundColor: 'white' }}>
+    <Container maxWidth="lg" sx={{ my: 7, }}>
       <Stack
-        sx={{ p: { md: 10, xs: 0 } }}
+        sx={{ p: { md: 10, xs: 2 }, backgroundColor: 'white' }}
         flexDirection="row"
         flexWrap={{ md: "nowrap", xs: "wrap" }}
         gap={7}
       >
-        <Container
+        <Box
           sx={{ mt: 2, "&>*": { mx: "0 !important", textAlign: "left !important" } }}
         >
           <SectionHeader
@@ -31,7 +31,7 @@ const WhyUs = () => {
           </Typography>
           <WhyUsPriority imgSrc={icon1} title="Delivery on Time" />
           <WhyUsPriority imgSrc={icon2} title="Optimized Travel Cost" />
-        </Container>
+        </Box>
 
         <Container>
           <Stack justifyContent={{ md: "center" }}>

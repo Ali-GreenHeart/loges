@@ -5,6 +5,7 @@ import PageContainer from "../../components/PageContainer";
 import WhatWeDo from "../../components/WWD";
 import WhyUs from "../../components/WhyUs";
 import ContainerHomeImg from "../../assets/home.png"
+import Slider from "../../components/Slider";
 
 const HomeBanner = () => {
   return (
@@ -44,6 +45,7 @@ const HomePage = () => {
           zIndex: -1
         }}></Box>
         <WhyUs />
+        <Slider />
       </PageContainer>
     </>
   );
