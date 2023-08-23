@@ -85,20 +85,20 @@ const CustomBanner = () => {
   );
 };
 
-const BlogSingle = ({}) => {
+const BlogSingle = ({ }) => {
   return (
     <PageContainer
       bannerImage={blogSingleBg}
       customizedBanner={<CustomBanner />}
     >
       <Container>
-        <Grid container gap={14}>
+        <Grid container justifyContent="space-between">
           <Grid item md={7} xs={12}>
             <Stack gap={3}>
               <Typography fontWeight={700} variant="h4" component="h4">
                 Your Logistics Solutions
               </Typography>
-              <Typography color="rgba(102, 108, 137, 1)" component="p">
+              <Typography color="rgba(102, 108, 137, 1)">
                 Duis semper lacus scelerisque, aliquam leo quis, porttitor leo.
                 Etiam lobortis dapibus libero vel porttitor. Nulla tempor elit
                 nec feugiat tempus.Phasellus at quam hendrerit semper feugiat id
@@ -106,7 +106,7 @@ const BlogSingle = ({}) => {
                 aliquam leo quis, porttitor leo Fusce lectus ex pretium[...]
               </Typography>
               <Box p={8} bgcolor="rgba(9, 18, 66, 1);">
-                <Typography variant="h6" color="white" fontStyle="italic" component="p">
+                <Typography variant="h6" color="white" fontStyle="italic">
                   “Digitization within transport and logistics means seamless
                   service to our customers, visibility in the supply chain, and
                   driving a more efficient business.”
@@ -129,10 +129,10 @@ const BlogSingle = ({}) => {
                     borderBottom="1px solid rgba(214, 214, 214, 1);"
                     p={2}
                   >
-                    <Typography color="rgba(102, 108, 137, 1);" component="p">
+                    <Typography color="rgba(102, 108, 137, 1);">
                       {category.title}
                     </Typography>
-                    <Typography fontWeight={700} component="p">
+                    <Typography fontWeight={700}>
                       ({category.quantity})
                     </Typography>
                   </Stack>
@@ -142,13 +142,13 @@ const BlogSingle = ({}) => {
           </Grid>
         </Grid>
 
-        <Grid my={7} container gap={14}>
+        <Grid my={7} container justifyContent="space-between">
           <Grid item md={7} xs={12}>
             <Stack gap={3}>
               <Typography fontWeight={700} variant="h4" component="h4">
                 Safest Logistics Solutions Provider With Integrity
               </Typography>
-              <Typography color="rgba(102, 108, 137, 1)" component="p">
+              <Typography color="rgba(102, 108, 137, 1)">
                 Duis semper lacus scelerisque, aliquam leo quis, porttitor leo.
                 Etiam lobortis dapibus libero vel porttitor. Nulla tempor elit
                 nec attempus.Phasellus at quam hendrerit semper David Warner
@@ -162,14 +162,14 @@ const BlogSingle = ({}) => {
                   style={{ width: "100%" }}
                 />
               </Box>
-              <Typography color="rgba(102, 108, 137, 1)" component="p">
+              <Typography color="rgba(102, 108, 137, 1)">
                 Duis semper lacus scelerisque, aliquam leo quis, porttitor leo.
                 Etiam lobortis dapibus libero vel porttitor. Nulla tempor elit
                 nec attempus.Phasellus at quam hendrerit semper David Warner
                 nunc. Morbi quis justo velit. Duis semper lacus scelerisque,
                 aliquam leo quis, porttitor leo Fusce lectus ex pretium.
               </Typography>
-              <Typography color="rgba(102, 108, 137, 1)" component="p">
+              <Typography color="rgba(102, 108, 137, 1)">
                 Duis semper lacus scelerisque, aliquam leo quis, porttitor leo.
                 Etiam lobortis dapib libero vel porttitor. Nulla tempor elit nec
                 feugiat tempus Phasellus atquam.
@@ -196,18 +196,18 @@ const BlogSingle = ({}) => {
                     <LinkedIn />
                   </Link>
                 </Stack>
-                <Typography color="rgba(102, 108, 137, 1)" component="p">Category : Shipping</Typography> 
+                <Typography color="rgba(102, 108, 137, 1)">Category : Shipping</Typography>
               </Stack>
             </Stack>
           </Grid>
 
           <Grid item md={3} xs={12}>
-            <Stack height="100%" justifyContent="space-evenly" gap={{ xs: 10 , md:0 }}>
+            <Stack height="100%" justifyContent="space-evenly" gap={{ xs: 10, md: 0 }}>
               <Stack gap={1} sx={{ "&>a": { width: "fit-content" } }}>
                 <Typography fontWeight={700} variant="h6" component="h3">
                   How can we help you?
                 </Typography>
-                <Typography color="rgba(102, 108, 137, 1)" component="p">
+                <Typography color="rgba(102, 108, 137, 1)">
                   Duis semper lacus scelerisque, aliquam leo quis, porttitor
                   leo. Etiam lobortis dapib libero vel porttitor. Nulla tempor
                   elit nec feugiat tempus Phasellus atquam.
@@ -233,19 +233,19 @@ const BlogSingle = ({}) => {
                 </Typography>
 
                 <Stack>
-                  <Typography color={"white"} component="p">
+                  <Typography color={"white"}>
                     Need Help?
                   </Typography>
-                  <Typography color={"white"} component="p">
+                  <Typography color={"white"}>
                     (00) 112 365 489
                   </Typography>
                 </Stack>
                 <Divider sx={{ backgroundColor: "rgba(255,255,255,0.2)" }} />
                 <Stack>
-                  <Typography color={"white"} component="p">
+                  <Typography color={"white"}>
                     Email
                   </Typography>
-                  <Typography color={"white"} component="p">
+                  <Typography color={"white"}>
                     contact@logistics.com
                   </Typography>
                 </Stack>
