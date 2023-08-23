@@ -8,6 +8,7 @@ import Slider from "../../components/Slider";
 import TeamMemberSection from "../../components/TeamMembersSection";
 import WhatWeDo from "../../components/WWD";
 import WhyUs from "../../components/WhyUs";
+import BlogCardSection from "../../components/BlogCardSection";
 
 const HomeBanner = () => {
   return (
@@ -50,7 +51,7 @@ const HomePage = () => {
         <Slider />
         <PlaneSection />
         <TeamMemberSection limit />
-
+        <BlogCardSection limit />
       </PageContainer>
     </>
   );
