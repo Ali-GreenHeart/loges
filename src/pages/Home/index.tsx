@@ -1,12 +1,13 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import planeHome from "../../assets/banner/plane_home.png";
+import ContainerHomeImg from "../../assets/home.png";
 import Button from "../../components/Button";
 import PageContainer from "../../components/PageContainer";
+import PlaneSection from "../../components/Plane";
+import Slider from "../../components/Slider";
+import TeamMemberSection from "../../components/TeamMembersSection";
 import WhatWeDo from "../../components/WWD";
 import WhyUs from "../../components/WhyUs";
-import ContainerHomeImg from "../../assets/home.png"
-import Slider from "../../components/Slider";
-import PlaneSection from "../../components/Plane";
 
 const HomeBanner = () => {
   return (
@@ -48,6 +49,8 @@ const HomePage = () => {
         <WhyUs />
         <Slider />
         <PlaneSection />
+        <TeamMemberSection limit />
+
       </PageContainer>
     </>
   );
