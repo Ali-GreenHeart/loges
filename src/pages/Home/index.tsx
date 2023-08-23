@@ -1,5 +1,6 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import planeHome from "../../assets/banner/plane_home.png";
+import antalya from "../../assets/antalya.png";
 import ContainerHomeImg from "../../assets/home.png";
 import Button from "../../components/Button";
 import PageContainer from "../../components/PageContainer";
@@ -52,6 +53,15 @@ const HomePage = () => {
         <PlaneSection />
         <TeamMemberSection limit />
         <BlogCardSection limit />
+        <Box
+          sx={{
+            background: `url("${antalya}") center`,
+            backgroundSize: 'cover',
+            height: 320,
+            mb: -10,
+            mt: 6
+          }}
+        ></Box>
       </PageContainer>
     </>
   );
