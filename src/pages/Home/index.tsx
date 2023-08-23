@@ -1,8 +1,14 @@
-import PageContainer from "../../components/PageContainer"
+import PageContainer from "../../components/PageContainer";
+import PlaneSection from "../../components/Plane";
 
 const HomePage = () => {
-    return (
-        <PageContainer />
-    )
-}
-export default HomePage
+  return (
+    <>
+      <PageContainer>
+        <PlaneSection />
+      </PageContainer>
+    </>
+  );
+};
+
+export default HomePage;
