@@ -1,6 +1,6 @@
-import { Box, Container, Stack, Typography } from "@mui/material";
-import PricingInfo from "./PricingInfo";
+import { Container, Stack } from "@mui/material";
 import SectionHeader from "../SectionHeader";
+import PricingInfo from "./PricingInfo";
 
 const prices = [
   {
