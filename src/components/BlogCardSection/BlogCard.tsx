@@ -1,4 +1,4 @@
-import { Stack, Box } from "@mui/material"
+import { Stack, Box, Typography } from "@mui/material"
 import { BlogData } from "."
 import { Link } from "react-router-dom"
 
@@ -7,9 +7,12 @@ import { Link } from "react-router-dom"
 const BlogCard = (item: BlogData) => {
     return (
         <Stack sx={{
-            flexDirection: "row",
+            flexDirection: {xs:"column", md:"row"},
             "&:hover a": {
                 display: 'flex !important'
+            },
+            "&>*":{
+                border:{xs:"none", md:"unset"}
             }
         }} className="all">
             <Stack sx={{
@@ -37,12 +40,18 @@ const BlogCard = (item: BlogData) => {
                 <Box className="elshad">
                     <Stack className="releaseDate">
                         <img className="icons" src={item.icon} alt="" />
-                        <p>{item.date}</p>
-                        <p>{item.month}</p>
+                        <Typography sx={{
+                            fontSize:"40px"
+                        }}>{item.date}</Typography>
+                        <Typography>{item.month}</Typography>
                     </Stack>
                 </Box>
-                BL</Stack>
-            <Box className="right">
+                </Stack>
+            <Box className="right"
+            sx={{
+                width:{xs:"100%", md:"unset"}
+            }}
+            >
                 <aside>{item.title}</aside>
                 <p>{item.content}</p>
                 <ul>
