@@ -6,6 +6,7 @@ import WhatWeDo from "../../components/WWD";
 import WhyUs from "../../components/WhyUs";
 import ContainerHomeImg from "../../assets/home.png"
 import Slider from "../../components/Slider";
+import PlaneSection from "../../components/Plane";
 
 const HomeBanner = () => {
   return (
@@ -46,6 +47,7 @@ const HomePage = () => {
         }}></Box>
         <WhyUs />
         <Slider />
+        <PlaneSection />
       </PageContainer>
     </>
   );
