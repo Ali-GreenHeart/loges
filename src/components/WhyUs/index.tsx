@@ -9,7 +9,7 @@ import StatisticFooter from "../StatisticFooter";
 
 const WhyUs = () => {
   return (
-    <Container sx={{ my: 7 }}>
+    <Container sx={{ my: 7, backgroundColor: 'white' }}>
       <Stack
         sx={{ p: { md: 10, xs: 0 } }}
         flexDirection="row"
@@ -17,7 +17,7 @@ const WhyUs = () => {
         gap={7}
       >
         <Container
-          sx={{ "&>*": { mx: "0 !important", textAlign: "left !important" } }}
+          sx={{ mt: 2, "&>*": { mx: "0 !important", textAlign: "left !important" } }}
         >
           <SectionHeader
             heading="Why Us"
