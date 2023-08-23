@@ -7,6 +7,7 @@ import Image from "../../assets/Photo.svg";
 import "./module.css";
 import { Box } from "@mui/material";
 import BlogCard from "./BlogCard";
+import Button from "../Button";
 
 
 export interface BlogData {
@@ -114,14 +115,15 @@ const blogData: BlogData[] = [
   },
 ];
 
-function BlogCardSection() {
+function BlogCardSection({ limit = false }: any) {
   return (
     <>
       <Box className="title">
         <div className="oubl">Our blog</div>
         <div className="oln">Our Latest News</div>
       </Box>
-      {blogData.map((item: any) => (<BlogCard key={item.id} {...item} />))}
+      {blogData.slice(0, limit ? 3 : blogData.length).map((item: any) => (<BlogCard key={item.id} {...item} />))}
+      {limit && <div style={{ textAlign: 'center' }}> <Button title="More Blog" isPrimary={false} /> </div>}
     </>
   );
 }

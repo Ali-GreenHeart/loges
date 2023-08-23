@@ -1,17 +1,20 @@
-import { Box, Typography } from "@mui/material"
+import { Box, SxProps, Theme, Typography } from "@mui/material"
 import MuiButton from "@mui/material/Button"
 
 interface IProps {
     title: string;
     isPrimary: boolean;
     type?: "button" | "reset" | "submit";
+    sx?: SxProps<Theme>;
 }
 
 
-const Button = ({ title, isPrimary = false, type = "button" }: IProps) => {
+const Button = ({ sx, title, isPrimary = false, type = "button" }: IProps) => {
     return (
-        <MuiButton type={type} variant="contained" color={isPrimary ? "primary" : "secondary"}
+        <MuiButton
+            type={type} variant="contained" color={isPrimary ? "primary" : "secondary"}
             sx={{
+                ...sx,
                 textTransform: 'capitalize',
                 p: 2,
                 px: 4,
