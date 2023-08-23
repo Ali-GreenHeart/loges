@@ -1,8 +1,10 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
-import PageContainer from "../../components/PageContainer";
-import PlaneSection from "../../components/Plane";
-import planeHome from "../../assets/banner/plane_home.png"
+import planeHome from "../../assets/banner/plane_home.png";
 import Button from "../../components/Button";
+import PageContainer from "../../components/PageContainer";
+import WhatWeDo from "../../components/WWD";
+import WhyUs from "../../components/WhyUs";
+import ContainerHomeImg from "../../assets/home.png"
 
 const HomeBanner = () => {
   return (
@@ -32,6 +34,16 @@ const HomePage = () => {
       <PageContainer
         customizedBanner={<HomeBanner />}
       >
+        <WhatWeDo />
+        <Box sx={{
+          height: 340,
+          backgroundImage: `url("${ContainerHomeImg}")`,
+          backgroundSize: 'cover',
+          position: 'relative',
+          top: 200,
+          zIndex: -1
+        }}></Box>
+        <WhyUs />
       </PageContainer>
     </>
   );
