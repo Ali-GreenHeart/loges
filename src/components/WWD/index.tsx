@@ -1,4 +1,4 @@
-import { Box, Container, Stack } from "@mui/material";
+import { Box, Container, Grid, Stack } from "@mui/material";
 import React from "react";
 import SectionHeader from "../SectionHeader";
 import ship from "../../assets/wwdicons/Ship.png";
@@ -62,66 +62,39 @@ function WhatWeDo() {
               gap: "20px",
             }}
           >
-            <SectionHeader 
+            <SectionHeader
+              isCentered={false}
               heading="What We Do"
               subheading="Safe & Reliable Cargo Solutions"
             />
           </Box>
-          <Box
-            sx={{
-              width: "100%",
-              display: "flex",
-              // backgroundColor: "red",
-            }}
-          >
-            <Stack
-              sx={{
-                display: "flex",
-                width: "100%",
-                flexDirection: "row",
-                justifyContent: "space-between",
-                gap: "40px",
-                flexWrap: "wrap",
-              }}
-            >
-              {servisler.map((servis) => {
-                return (
-                  <>
-                    <Stack sx={{
-                      flexDirection:{xs:"column", md:"row"},
-                      width:{xs:"100%", md:"45%"},
-                      // alignItems:"center",
-                      // justifyContent:"center",
-                      flexWrap:"nowrap",
-                    }}>
-                      <Box
-                        sx={{
-                          padding:"0px 20px",
-                          // backgroundColor: "blue",
-                          
-                        }}
-                      >
-                        <img src={servis.icon} alt="" />
-                      </Box>
-                      <Stack
-                        sx={{
-                          borderLeft: {xs:"none", md:"1px solid #D8D8D8"},
-                          width: { xs: "96%", md: "100%" },
-                          padding:"0px 20px",
-                          // margin:"20px"
-                        }}
-                      >
-                        <h2>{servis.title}</h2>
-                        <p style={{ color: "#666C89", width: "100%" }}>
-                          {servis.subtitle}
-                        </p>
-                      </Stack>
+          <Grid container spacing={5} justifyContent="space-between">
+            {
+              servisler.map((servis) => {
+                return <Grid key={servis.id} item xs={12} md={6}>
+                  <Stack sx={{
+                    flexDirection: { xs: "column", md: "row" }
+                  }}>
+                    <Box sx={{ width: "100px", mr: "20px" }}>
+                      <img style={{ width: '100%', objectFit: 'cover' }} src={servis.icon} alt="" />
+                    </Box>
+                    <Stack
+                      sx={{
+                        borderLeft: { xs: "none", md: "1px solid #D8D8D8" },
+                        padding: "0px 20px",
+                        maxWidth: 300,
+                      }}
+                    >
+                      <h2>{servis.title}</h2>
+                      <p style={{ color: "#666C89" }}>
+                        {servis.subtitle}
+                      </p>
                     </Stack>
-                  </>
-                );
-              })}
-            </Stack>
-          </Box>
+                  </Stack>
+                </Grid>
+              })
+            }
+          </Grid>
         </Stack>
       </Container>
     </PageContainer>
