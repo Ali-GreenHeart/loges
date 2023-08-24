@@ -12,6 +12,7 @@ import BlogSingle from "../pages/BlogSingle";
 import WhatWeDo from "../components/WWD";
 import ProjectPage from "../pages/ProjectSingle";
 import Services from "../pages/Services";
+import TransportingAcross from "../components/TransportingAcross";
 
 const HomePage = lazy(() => import("../pages/Home"));
 
