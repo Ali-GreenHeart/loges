@@ -1,7 +1,5 @@
 import { Box, Stack } from "@mui/material";
-import React from "react";
 import "./module.css";
-
 import tanker from "../../assets/transporting/Photo.png";
 import packaging from "../../assets/transporting/packaking.png";
 import contract from "../../assets/transporting/contract.png";
@@ -55,9 +53,9 @@ const TransportingAcross = () => {
         background:
           "linear-gradient(95deg, #FFB629 -1.19%, #FFDA56 57.78%, #FFD7A6 115.08%)",
         width: "100%",
-        height: {xs:"auto", xl:"40vh"},
-        margin:"500px 0px 100px 0px",
-        
+        height: { xs: "auto", xl: "40vh" },
+        margin: "500px 0px 100px 0px",
+
       }}
     >
       <Stack
@@ -66,7 +64,7 @@ const TransportingAcross = () => {
           flexWrap: "wrap",
           position: "relative",
           gap: "20px",
-          top: {xs:"0", md:"-350px"},
+          top: { xs: "0", md: "-350px" },
           justifyContent: "center",
         }}
       >
@@ -75,12 +73,12 @@ const TransportingAcross = () => {
         </h1>
         {across.map((work) => {
           return (
-            <Box sx={{}}>
+            <Box >
               <Box>
                 <img
                   src={work.backgroundPhoto}
                   alt="none"
-                  style={{ position: "relative", maxWidth:"100%"}}
+                  style={{ position: "relative", maxWidth: "100%" }}
                 />
               </Box>
 
