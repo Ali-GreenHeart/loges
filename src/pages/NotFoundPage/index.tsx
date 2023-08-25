@@ -16,7 +16,6 @@ const NotFoundPage = () => {
                 fontSize: 350,
                 fontWeight: 900,
                 color: '#1C1F35',
-                fontFamily: 'sans-serif',
                 "& > span": {
                   color: 'primary.main',
                   fontWeight: 900,
