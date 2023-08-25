@@ -26,13 +26,13 @@ const WebRouting = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/service-single" element={<ServiceSingle />} />
         <Route path="/project" element={<Project />} />
+        <Route path="/project-single" element={<ProjectPage />} />
         <Route path="/password-protection" element={<PasswordProtection />} />
         <Route path="/licenses" element={<Liceses />} />
         <Route path="/change-log" element={<ChangeLog />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/blogs/:id" element={<BlogSingle />} />
         <Route path="/whatwedo" element={<WhatWeDo />} />
-        <Route path="/project-page" element={<ProjectPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Suspense>
