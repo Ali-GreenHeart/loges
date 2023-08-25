@@ -73,7 +73,7 @@ const TransportingAcross = () => {
         </h1>
         {across.map((work) => {
           return (
-            <Box >
+            <Box key={work.id}>
               <Box>
                 <img
                   src={work.backgroundPhoto}
