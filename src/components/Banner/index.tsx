@@ -12,15 +12,16 @@ const Banner = ({ bannerImage, bannerTitle, bannerSubtitle, customizedBanner = u
   return (
     <>
       <Box
+        className="container_of_appbar_896yg"
         sx={{
           height: customizedBanner ? "unset" : "340px",
-          background: `url("${bannerImage}") no-repeat center`,
+          background: ` url("${bannerImage}")  no-repeat center`,
           backgroundSize: 'cover'
         }}
       >
         <Box
           sx={{
-            background: customizedBanner ? "linear-gradient(91.25deg, rgba(3, 45, 95, 0.54) 9.39%, rgba(9, 18, 66, 0.49) 93.62%)" : "linear-gradient(90.96deg, #032D5F 18.62%, rgba(9, 18, 66, 0.3) 51.58%)",
+            background: customizedBanner ? "unset" : "linear-gradient(90.96deg, #032D5F 18.62%, rgba(9, 18, 66, 0.3) 51.58%)",
             height: '100%'
           }}
         >

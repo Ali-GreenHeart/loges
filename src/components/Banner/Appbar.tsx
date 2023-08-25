@@ -213,7 +213,7 @@ function ResponsiveAppBar() {
             </Link>
             <Button
               sx={{
-                backgroundColor: "white",
+                backgroundColor: "white !important",
                 color: "black",
                 alignSelf: "stretch",
                 borderRadius: "0",
@@ -221,7 +221,7 @@ function ResponsiveAppBar() {
                 textTransform: "capitalize",
                 "&:hover": {
                   opacity: 0.7,
-                  backgroundColor: "white",
+                  backgroundColor: "white !important",
                 },
               }}
             >

@@ -58,7 +58,7 @@ const NavLink = ({
               sx={{
                 position: "absolute",
                 top: 60,
-                backgroundColor: "secondary.main",
+                backgroundColor: "#091242 !important",
                 "&::-webkit-scrollbar": {
                   width: "4px",
                 },
