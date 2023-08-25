@@ -12,7 +12,7 @@ const Contact = () => {
     <>
       <Container className="Elsad_canim_senden_qurtardi" maxWidth="md">
         <Box
-          className="mainbox"
+          className="mainbox ELSAAAAAAAAAAAAAAAAD "
           sx={{
             padding: 8,
             textAlign: 'center'

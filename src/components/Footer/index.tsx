@@ -1,10 +1,10 @@
-import { Box, Button, Container, Divider, Stack, TextField, Typography } from "@mui/material"
+import { Box, Button, Container, Divider, IconButton, Stack, TextField, Typography } from "@mui/material"
 import logo from '../../assets/logo.png'
 import HeaderInfo from "../Header/HeaderInfo"
 import { EmailOutlined, Facebook, LinkedIn, Twitter } from "@mui/icons-material"
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import { Link } from "react-router-dom";
-
+import MyButton from "../Button";
 
 const Footer = () => {
     return (
@@ -91,13 +91,19 @@ const Footer = () => {
                         <Box sx={{ p: 4 }}>
                             <Typography textAlign="left" variant="h5">Subscribe</Typography>
                         </Box>
-                        <Stack pl={4}>
+                        <Stack pl={4} gap={2}>
                             <TextField label="Email here*" />
-                            <Stack flexDirection="row" alignItems="center">
-                                <Button>Send Now</Button>
-                                <LinkedIn />
-                                <Twitter />
-                                <Facebook />
+                            <Stack flexDirection="row" alignItems="center" spacing={1} justifyContent="space-between">
+                                <MyButton sx={{ mr: 2 }} withCircle={false} isPrimary title="Send Now" />
+                                <IconButton sx={{ color: "white" }}>
+                                    <LinkedIn />
+                                </IconButton>
+                                <IconButton sx={{ color: "white" }}>
+                                    <Twitter />
+                                </IconButton>
+                                <IconButton sx={{ color: "white" }}>
+                                    <Facebook />
+                                </IconButton>
                             </Stack>
                         </Stack>
                     </Box>

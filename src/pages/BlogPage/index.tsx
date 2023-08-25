@@ -1,18 +1,18 @@
-import Header from "../../components/Header";
-import Banner from "../../components/Banner";
-import b from "../../components/contactUs";
-import Footer from "../../components/Footer";
-import PageContainer from "../../components/PageContainer";
 import Truck from "../../assets/banner/Photo.svg";
+import BlogCardSection from "../../components/BlogCardSection";
+import PageContainer from "../../components/PageContainer";
 const BlogPage = () => {
-    return (
-      <>
-       <PageContainer bannerImage={Truck}>
-        <Contact/>
+  return (
+    <>
+      <PageContainer
+        bannerSubtitle="Blog"
+        bannerTitle="Our Latest News"
+        bannerImage={Truck}>
+        <BlogCardSection />
       </PageContainer>
-        
-      </>
-    );
-  };
-  
-  export default BlogPage;
+
+    </>
+  );
+};
+
+export default BlogPage;
