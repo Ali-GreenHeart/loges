@@ -10,6 +10,7 @@ import TeamMemberSection from "../../components/TeamMembersSection";
 import WhatWeDo from "../../components/WWD";
 import WhyUs from "../../components/WhyUs";
 import BlogCardSection from "../../components/BlogCardSection";
+import TransportingAcross from "../../components/TransportingAcross";
 import ContactHomepage from "../../components/ContactHomepage";
 
 const HomeBanner = () => {
@@ -50,6 +51,7 @@ const HomePage = () => {
           zIndex: -1
         }}></Box>
         <WhyUs />
+        <TransportingAcross />
         <Slider />
         <PlaneSection />
         <TeamMemberSection limit />

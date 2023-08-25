@@ -18,7 +18,7 @@ const PageContainer = ({
   bannerTitle,
   bannerSubtitle,
   customizedBanner = undefined,
-  py = 10
+  py = 10,
 }: IProps) => {
   return (
     <>
@@ -29,9 +29,9 @@ const PageContainer = ({
         bannerSubtitle={bannerSubtitle}
         customizedBanner={customizedBanner}
       />
-      <Box component="main"
-        py={py}
-      >{children}</Box>
+      <Box component="main" py={py}>
+        {children}
+      </Box>
       <Footer />
     </>
   );

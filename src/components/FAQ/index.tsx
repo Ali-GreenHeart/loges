@@ -6,7 +6,9 @@ import SectionHeader from "../SectionHeader";
 import Sponsors from "../Sponsors";
 import BasicAccordion from "./accorion";
 import "./module.css";
-const FAQ = () => {
+
+
+const FAQ = ({withSponsors=true}:any) => {
   return (
     <>
 
@@ -114,7 +116,9 @@ const FAQ = () => {
             </Grid>
           </Container>
         </Box>
-        <Sponsors />
+        {
+          withSponsors&&<Sponsors />
+        }
       </>
 
     </>
