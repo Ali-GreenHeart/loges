@@ -31,11 +31,11 @@ const WebRouting = () => {
         <Route path="/blogs" element={<BlogPage />} />
         <Route path="/blogs/:id" element={<BlogSingle />} />
         <Route path="/team" element={<TeamPage />} />
+        <Route path="/contact-us" element={<ContactPage />} />
         <Route path="/password-protection" element={<PasswordProtection />} />
         <Route path="/licenses" element={<Liceses />} />
         <Route path="/change-log" element={<ChangeLog />} />
         <Route path="/whatwedo" element={<WhatWeDo />} />
-        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Suspense>
   );
