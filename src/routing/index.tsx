@@ -34,9 +34,9 @@ const WebRouting = () => {
         <Route path="/team" element={<TeamPage />} />
         <Route path="/contact-us" element={<ContactPage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/change-log" element={<ChangeLog />} />
         <Route path="/password-protection" element={<PasswordProtection />} />
         <Route path="/licenses" element={<Liceses />} />
-        <Route path="/change-log" element={<ChangeLog />} />
         <Route path="/whatwedo" element={<WhatWeDo />} />
       </Routes>
     </Suspense>
