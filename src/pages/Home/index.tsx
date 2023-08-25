@@ -1,27 +1,28 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
-import planeHome from "../../assets/banner/plane_home.png";
 import antalya from "../../assets/antalya.png";
+import planeHome from "../../assets/banner/plane_home.png";
 import ContainerHomeImg from "../../assets/home.png";
+import BlogCardSection from "../../components/BlogCardSection";
 import Button from "../../components/Button";
+import ContactHomepage from "../../components/ContactHomepage";
 import PageContainer from "../../components/PageContainer";
 import PlaneSection from "../../components/Plane";
 import Slider from "../../components/Slider";
 import TeamMemberSection from "../../components/TeamMembersSection";
+import TransportingAcross from "../../components/TransportingAcross";
 import WhatWeDo from "../../components/WWD";
 import WhyUs from "../../components/WhyUs";
-import BlogCardSection from "../../components/BlogCardSection";
-import TransportingAcross from "../../components/TransportingAcross";
-import ContactHomepage from "../../components/ContactHomepage";
 
 const HomeBanner = () => {
   return (
     <Box
+      className="the_banner_of_home_page_8yguvh"
       sx={{
         background: `url("${planeHome}") no-repeat`,
         backgroundSize: 'cover',
         py: 10
       }}>
-      <Stack justifyContent="center" alignItems="flex-start" maxWidth="lg" mx="auto" sx={{ height: '90vh', }}>
+      <Stack justifyContent="center" alignItems="flex-start" maxWidth="lg" mx="auto" sx={{ height: '90vh' }}>
         <Container maxWidth="sm" sx={{ mx: '0', color: 'white' }}>
           <Typography component="p" sx={(t) => ({ backgroundColor: t.palette.secondary.light, borderLeft: `4px solid ${t.palette.primary.main}`, fontSize: 14, p: "3px", px: 2, width: 'fit-content' })}>
             Logistics & Supply Chain Solutions
@@ -37,7 +38,25 @@ const HomeBanner = () => {
 
 const HomePage = () => {
   return (
-    <>
+    <Box
+      sx={{
+        "& > .container_of_appbar_896yg": {
+          "& .MuiAppBar-positionStatic": {
+            position: 'relative',
+            zIndex: 20,
+            backgroundColor: 'rgba(9, 18, 66, 0.25)',
+            "& *": {
+              backgroundColor: 'unset'
+            }
+          },
+          backgroundColor: 'transparent !important',
+          "& .the_banner_of_home_page_8yguvh": {
+            position: 'relative',
+            top: '-70px'
+          }
+        }
+      }}
+    >
       <PageContainer
         customizedBanner={<HomeBanner />}
       >
@@ -69,7 +88,7 @@ const HomePage = () => {
           }}
         ></Box>
       </PageContainer>
-    </>
+    </Box>
   );
 };
 

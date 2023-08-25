@@ -1,18 +1,22 @@
-import { Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
+import { Route, Routes } from "react-router-dom";
 import Loading from "../components/Loading";
 import PasswordProtection from "../components/PasswordProtection";
-import Project from "../pages/Project";
 import Liceses from "../components/licenses";
-import ServiceSingle from "../pages/ServiceSingle";
 import ChangeLog from "../pages/ChangeLog";
+import Project from "../pages/Project";
+import ServiceSingle from "../pages/ServiceSingle";
 
-import TeamPage from "../pages/Team-Page";
-import BlogSingle from "../pages/BlogSingle";
 import WhatWeDo from "../components/WWD";
+import AboutUsPage from "../pages/AboutUsPage";
+import BlogPage from "../pages/BlogPage";
+import BlogSingle from "../pages/BlogSingle";
+import ContactPage from "../pages/Contact";
+import PricingPage from "../pages/PricingPage";
 import ProjectPage from "../pages/ProjectSingle";
 import Services from "../pages/Services";
-import ContactPage from "../pages/Contact";
+import TeamPage from "../pages/Team-Page";
+import NotFoundPage from "../pages/NotFoundPage";
 
 const HomePage = lazy(() => import("../pages/Home"));
 
@@ -21,17 +25,21 @@ const WebRouting = () => {
     <Suspense fallback={<Loading />}>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/password-protection" element={<PasswordProtection />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="/licenses" element={<Liceses />} />
-        <Route path="/service-single" element={<ServiceSingle />} />
+        <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/change-log" element={<ChangeLog />} />
-        <Route path="/team" element={<TeamPage />} />
+        <Route path="/service-single" element={<ServiceSingle />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/project-single" element={<ProjectPage />} />
+        <Route path="/blogs" element={<BlogPage />} />
         <Route path="/blogs/:id" element={<BlogSingle />} />
-        <Route path="/whatwedo" element={<WhatWeDo />} />
-        <Route path="/project-page" element={<ProjectPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/contact-us" element={<ContactPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/change-log" element={<ChangeLog />} />
+        <Route path="/licenses" element={<Liceses />} />
+        <Route path="/password-protection" element={<PasswordProtection />} />
+        <Route path="*" element={<NotFoundPage />} />
+
       </Routes>
     </Suspense>
   );

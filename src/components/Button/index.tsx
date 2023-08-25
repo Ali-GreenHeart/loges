@@ -6,10 +6,11 @@ interface IProps {
     isPrimary: boolean;
     type?: "button" | "reset" | "submit";
     sx?: SxProps<Theme>;
+    withCircle?: boolean;
 }
 
 
-const Button = ({ sx, title, isPrimary = false, type = "button" }: IProps) => {
+const Button = ({ sx, title, isPrimary = false, type = "button", withCircle = true }: IProps) => {
     return (
         <MuiButton
             type={type} variant="contained" color={isPrimary ? "primary" : "secondary"}
@@ -37,7 +38,9 @@ const Button = ({ sx, title, isPrimary = false, type = "button" }: IProps) => {
             }}
         >
             <Typography component="p" sx={{ zIndex: 2, fontWeight: 600, }}>{title}</Typography>
-            <Box bgcolor={isPrimary ? "#FFFFFF" : "#1F2A69"} sx={{ position: "absolute", right: -10, bottom: -10, borderRadius: "50%", width: 30, height: 30, zIndex: 1 }}></Box>
+            {
+                withCircle && <Box bgcolor={isPrimary ? "#FFFFFF" : "#1F2A69"} sx={{ position: "absolute", right: -10, bottom: -10, borderRadius: "50%", width: 30, height: 30, zIndex: 1 }}></Box>
+            }
         </MuiButton>
     )
 }
