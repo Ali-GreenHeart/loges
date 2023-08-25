@@ -9,12 +9,13 @@ import ServiceSingle from "../pages/ServiceSingle";
 
 import WhatWeDo from "../components/WWD";
 import AboutUsPage from "../pages/AboutUsPage";
+import BlogPage from "../pages/BlogPage";
 import BlogSingle from "../pages/BlogSingle";
 import ContactPage from "../pages/Contact";
+import PricingPage from "../pages/PricingPage";
 import ProjectPage from "../pages/ProjectSingle";
 import Services from "../pages/Services";
 import TeamPage from "../pages/Team-Page";
-import BlogPage from "../pages/BlogPage";
 
 const HomePage = lazy(() => import("../pages/Home"));
 
@@ -32,6 +33,7 @@ const WebRouting = () => {
         <Route path="/blogs/:id" element={<BlogSingle />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/contact-us" element={<ContactPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
         <Route path="/password-protection" element={<PasswordProtection />} />
         <Route path="/licenses" element={<Liceses />} />
         <Route path="/change-log" element={<ChangeLog />} />
