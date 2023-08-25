@@ -14,6 +14,7 @@ import ContactPage from "../pages/Contact";
 import ProjectPage from "../pages/ProjectSingle";
 import Services from "../pages/Services";
 import TeamPage from "../pages/Team-Page";
+import BlogPage from "../pages/BlogPage";
 
 const HomePage = lazy(() => import("../pages/Home"));
 
@@ -27,6 +28,7 @@ const WebRouting = () => {
         <Route path="/service-single" element={<ServiceSingle />} />
         <Route path="/project" element={<Project />} />
         <Route path="/project-single" element={<ProjectPage />} />
+        <Route path="/blogs" element={<BlogPage />} />
         <Route path="/password-protection" element={<PasswordProtection />} />
         <Route path="/licenses" element={<Liceses />} />
         <Route path="/change-log" element={<ChangeLog />} />
