@@ -10,6 +10,7 @@ import TeamMemberSection from "../../components/TeamMembersSection";
 import WhatWeDo from "../../components/WWD";
 import WhyUs from "../../components/WhyUs";
 import BlogCardSection from "../../components/BlogCardSection";
+import ContactHomepage from "../../components/ContactHomepage";
 
 const HomeBanner = () => {
   return (
@@ -52,6 +53,9 @@ const HomePage = () => {
         <Slider />
         <PlaneSection />
         <TeamMemberSection limit />
+
+        <ContactHomepage />
+
         <BlogCardSection limit />
         <Box
           sx={{
