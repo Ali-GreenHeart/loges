@@ -1,17 +1,16 @@
+import { Grid, Stack } from "@mui/material";
 import "swiper/css";
-import serviceBanner from "../../assets/banner/service-single-banner.png";
+import truckBanner from "../../assets/banner/truck.png";
+import HowWeWork from "../../components/HowWeWork";
 import PageContainer from "../../components/PageContainer";
 import Slider from "../../components/Slider";
-import { Grid, Stack } from "@mui/material";
-import WhatWeDo from "../../components/WWD";
-import HowWeWork from "../../components/HowWeWork";
-import WhyUsPriority from "../../components/WhyUsPriority";
 import StatisticFooter from "../../components/StatisticFooter";
+import WhatWeDo from "../../components/WWD";
 
 const Services = () => {
   return (
     <PageContainer
-      bannerImage={serviceBanner}
+      bannerImage={truckBanner}
       bannerSubtitle="Services"
       bannerTitle="Our Logistics Service">
       <Stack gap={10}>
