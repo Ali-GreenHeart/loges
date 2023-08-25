@@ -6,17 +6,15 @@ import Liceses from "../components/licenses";
 import ChangeLog from "../pages/ChangeLog";
 import Project from "../pages/Project";
 import ServiceSingle from "../pages/ServiceSingle";
-
-import WhatWeDo from "../components/WWD";
 import AboutUsPage from "../pages/AboutUsPage";
 import BlogPage from "../pages/BlogPage";
 import BlogSingle from "../pages/BlogSingle";
 import ContactPage from "../pages/Contact";
+import NotFoundPage from "../pages/NotFoundPage";
 import PricingPage from "../pages/PricingPage";
 import ProjectPage from "../pages/ProjectSingle";
 import Services from "../pages/Services";
 import TeamPage from "../pages/Team-Page";
-import NotFoundPage from "../pages/NotFoundPage";
 
 const HomePage = lazy(() => import("../pages/Home"));
 

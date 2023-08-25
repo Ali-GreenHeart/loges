@@ -1,11 +1,4 @@
 import { Box, Stack } from "@mui/material";
-import React from "react";
-
-import liquid from "../../assets/transporting/Photo.png";
-import packaging from "../../assets/transporting/packaking.png";
-import contract from "../../assets/transporting/contract.png";
-import warehouse from "../../assets/transporting/warehouse.png";
-import specialized from "../../assets/transporting/specialized.png";
 
 const Transporting = () => {
   return (

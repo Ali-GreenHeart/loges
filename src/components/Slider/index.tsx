@@ -52,6 +52,7 @@ const Slider = () => {
     const [isLastSlide, setIsLastSlide] = useState(false);
     const prevButtonRef = useRef(null);
     const nextButtonRef = useRef(null);
+    console.log(init)
     return (
         <Container>
             <Stack

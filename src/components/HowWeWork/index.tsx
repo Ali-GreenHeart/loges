@@ -38,7 +38,14 @@ const HowWeWork = () => {
           <Grid container spacing={5} justifyContent={{ md: 'space-evenly', lg: 'center' }}>
             <Grid xs={12} md={5} lg={5} item sx={mainImgContainerStyle}>
               <img src={MainImg} style={{ width: '100%' }} alt="worker" />
-              <img className="how_we_work_texture_img" src={SecondImg} alt="state" style={secondImgStyle} />
+              <img className="how_we_work_texture_img" src={SecondImg} alt="state" style={{
+                position: "absolute",
+                bottom: -40,
+                right: -60,
+                width: "45%",
+                height: "60%",
+                zIndex: 3
+              }} />
             </Grid>
 
             <Grid xs={12} md={5} lg={5} item>
@@ -89,13 +96,5 @@ const mainImgContainerStyle = {
   }
 };
 
-const secondImgStyle = {
-  position: "absolute",
-  bottom: -40,
-  right: -60,
-  width: "45%",
-  height: "60%",
-  zIndex: 3
-};
 
 export default HowWeWork;

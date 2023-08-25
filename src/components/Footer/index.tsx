@@ -1,10 +1,10 @@
-import { Box, Button, Container, Divider, IconButton, Stack, TextField, Typography } from "@mui/material"
-import logo from '../../assets/logo.png'
-import HeaderInfo from "../Header/HeaderInfo"
-import { EmailOutlined, Facebook, LinkedIn, Twitter } from "@mui/icons-material"
+import { EmailOutlined, Facebook, LinkedIn, Twitter } from "@mui/icons-material";
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+import { Box, Container, Divider, IconButton, Stack, TextField, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import logo from '../../assets/logo.png';
 import MyButton from "../Button";
+import HeaderInfo from "../Header/HeaderInfo";
 
 const Footer = () => {
     return (

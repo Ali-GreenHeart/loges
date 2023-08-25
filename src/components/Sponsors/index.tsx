@@ -1,10 +1,9 @@
-import { Box, Container, Stack, colors } from "@mui/material";
-import React from "react";
+import { Box, Container, Stack } from "@mui/material";
+import image from "../../assets/sponsores/Image.png";
 import background from "../../assets/sponsores/Logo.png";
 import norto from "../../assets/sponsores/Norto.png";
-import pointsone from "../../assets/sponsores/pointsone.png";
 import oots from "../../assets/sponsores/Out Of The Sand Box.png";
-import image from "../../assets/sponsores/Image.png"
+import pointsone from "../../assets/sponsores/pointsone.png";
 
 import "./module.css";
 const Sponsors = () => {
@@ -16,7 +15,7 @@ const Sponsors = () => {
             marginTop: "50px",
             flexDirection: { xs: "column", md: "row" },
             width: "100%",
-            alignItems:"center",
+            alignItems: "center",
           }}
         >
           <Box
@@ -26,7 +25,7 @@ const Sponsors = () => {
               alignItems: "center",
               justifyContent: "center",
               border: "1px solid #4E5683",
-              width:{xs:"100%",sm:"50%", md:"25%"},
+              width: { xs: "100%", sm: "50%", md: "25%" },
               height: "235px",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "initial",
@@ -41,7 +40,7 @@ const Sponsors = () => {
               alignItems: "center",
               justifyContent: "center",
               border: "1px solid #4E5683",
-              width:{xs:"100%",sm:"50%", md:"25%"},
+              width: { xs: "100%", sm: "50%", md: "25%" },
               height: "235px",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "initial",
@@ -55,7 +54,7 @@ const Sponsors = () => {
               alignItems: "center",
               justifyContent: "center",
               border: "1px solid #4E5683",
-              width:{xs:"100%",sm:"50%", md:"25%"},
+              width: { xs: "100%", sm: "50%", md: "25%" },
               height: "235px",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "initial",
@@ -69,7 +68,7 @@ const Sponsors = () => {
               alignItems: "center",
               justifyContent: "center",
               border: "1px solid #4E5683",
-              width:{xs:"100%",sm:"50%", md:"25%"},
+              width: { xs: "100%", sm: "50%", md: "25%" },
               height: "235px",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "initial",
