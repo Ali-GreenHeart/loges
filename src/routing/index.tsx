@@ -23,11 +23,11 @@ const WebRouting = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/password-protection" element={<PasswordProtection />} />
         <Route path="/project" element={<Project />} />
         <Route path="/licenses" element={<Liceses />} />
         <Route path="/service-single" element={<ServiceSingle />} />
-        <Route path="/services" element={<Services />} />
         <Route path="/change-log" element={<ChangeLog />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/blogs/:id" element={<BlogSingle />} />
