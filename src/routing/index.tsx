@@ -37,7 +37,6 @@ const WebRouting = () => {
         <Route path="/change-log" element={<ChangeLog />} />
         <Route path="/licenses" element={<Liceses />} />
         <Route path="/password-protection" element={<PasswordProtection />} />
-        <Route path="/whatwedo" element={<WhatWeDo />} />
       </Routes>
     </Suspense>
   );
