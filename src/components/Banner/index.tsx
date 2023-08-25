@@ -13,7 +13,7 @@ const Banner = ({ bannerImage, bannerTitle, bannerSubtitle, customizedBanner = u
     <>
       <Box
         sx={{
-          height: "340px",
+          height: customizedBanner ? "unset" : "340px",
           background: `url("${bannerImage}") no-repeat center`,
           backgroundSize: 'cover'
         }}

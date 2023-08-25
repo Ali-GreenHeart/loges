@@ -55,7 +55,7 @@ const pages = [
       },
       {
         id: 4,
-        to: "/blog-single",
+        to: "/blogs/:id",
         page: "Blog Single",
       },
       {

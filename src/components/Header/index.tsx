@@ -125,7 +125,7 @@ function Header() {
                         <img style={{ width: 180 }} src={logo} alt="our loges" />
                     </Typography>
 
-                    <Stack sx={{ columnGap: 4, flexDirection: 'row', flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Stack sx={{ columnGap: 4, flexDirection: 'row', justifyContent: 'space-between', flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {
                             links.map((props) => (
                                 <HeaderInfo {...props} />
