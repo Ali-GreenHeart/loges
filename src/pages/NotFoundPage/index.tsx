@@ -1,5 +1,5 @@
 import { Container, Stack, Typography } from "@mui/material";
-import Truck from "../../assets/banner/Photo.svg";
+import NotFound from "../../assets/banner/notfound.png";
 import PageContainer from "../../components/PageContainer";
 import Button from "../../components/Button";
 const NotFoundPage = () => {
@@ -8,7 +8,7 @@ const NotFoundPage = () => {
       <PageContainer
         bannerSubtitle="About Us"
         bannerTitle="About Our Logistics"
-        bannerImage={Truck}>
+        bannerImage={NotFound}>
         <Container maxWidth="sm">
           <Stack alignItems="center" gap={1}>
             <Typography
