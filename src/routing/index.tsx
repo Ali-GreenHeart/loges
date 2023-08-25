@@ -16,6 +16,7 @@ import PricingPage from "../pages/PricingPage";
 import ProjectPage from "../pages/ProjectSingle";
 import Services from "../pages/Services";
 import TeamPage from "../pages/Team-Page";
+import NotFoundPage from "../pages/NotFoundPage";
 
 const HomePage = lazy(() => import("../pages/Home"));
 
@@ -37,6 +38,8 @@ const WebRouting = () => {
         <Route path="/change-log" element={<ChangeLog />} />
         <Route path="/licenses" element={<Liceses />} />
         <Route path="/password-protection" element={<PasswordProtection />} />
+        <Route path="*" element={<NotFoundPage />} />
+
       </Routes>
     </Suspense>
   );
