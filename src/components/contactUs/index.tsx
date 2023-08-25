@@ -3,7 +3,7 @@ import Button from "../Button";
 import mail from "./logo.images/Icon.mail.svg";
 import clocks from "./logo.images/Icon.svg";
 import phone from "./logo.images/icon.phone.svg";
-import "./module.css";
+
 
 const Contact = () => {
   return (
