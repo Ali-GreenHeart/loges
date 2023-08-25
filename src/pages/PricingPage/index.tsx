@@ -1,5 +1,5 @@
 import { Stack } from "@mui/material";
-import Truck from "../../assets/banner/Photo.svg";
+import Pricing from "../../assets/banner/pricing.png";
 import PageContainer from "../../components/PageContainer";
 import PricingCard from "../../components/PricingCard";
 import Slider from "../../components/Slider";
@@ -9,7 +9,7 @@ const PricingPage = () => {
       <PageContainer
         bannerSubtitle="Pricing"
         bannerTitle="Our Best Price"
-        bannerImage={Truck}>
+        bannerImage={Pricing}>
         <Stack gap={10}>
           <PricingCard />
           <Slider />
