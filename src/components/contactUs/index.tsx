@@ -1,22 +1,22 @@
-import { Box, Container, Stack } from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
 import Button from "../Button";
 import mail from "./logo.images/Icon.mail.svg";
 import clocks from "./logo.images/Icon.svg";
 import phone from "./logo.images/icon.phone.svg";
-import "./module.css";
+import "./module.css"
 
 const Contact = () => {
   return (
-    <Container>
+    <Container maxWidth="md">
       <Box
         className="mainbox"
         sx={{
-          padding: "20px",
+          padding: 8,
           textAlign: 'center'
         }}
       >
         <div className="firstDiv" style={{ paddingLeft: '8px', width: 'fit-content', margin: '0 auto' }}>Contact</div>
-        <h1>Get in touch with us</h1>
+        <Typography variant="h4" component="h1" my={2}>Get in touch with us</Typography>
         <p className="firstP">
           Leverage agile frameworks to provide a robust synopsis for strategy
           foster collaborative thinking to further the overall value.

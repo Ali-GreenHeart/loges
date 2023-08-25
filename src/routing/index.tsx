@@ -12,7 +12,7 @@ import BlogSingle from "../pages/BlogSingle";
 import WhatWeDo from "../components/WWD";
 import ProjectPage from "../pages/ProjectSingle";
 import Services from "../pages/Services";
-import TransportingAcross from "../components/TransportingAcross";
+import ContactPage from "../pages/Contact";
 
 const HomePage = lazy(() => import("../pages/Home"));
 
@@ -31,6 +31,7 @@ const WebRouting = () => {
         <Route path="/blogs/:id" element={<BlogSingle />} />
         <Route path="/whatwedo" element={<WhatWeDo />} />
         <Route path="/project-page" element={<ProjectPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Suspense>
   );
